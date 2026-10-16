@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143d3c">
+  <meta name="description" content="2027 大分進出、別府與福岡親子自駕五日行程。互動時間軸、福岡三套方案與景點地圖。">
+  <title>九州親子自駕｜大分・別府・福岡互動行程</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#itinerary">跳到行程</a>
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="九州親子自駕，回到頂端">
+        <span class="brand-mark" aria-hidden="true">九</span>
+        <span><strong>KYUSHU / 2027</strong><small>親子自駕旅行手冊</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="主選單">
+        <a href="#trip-switcher">切換行程</a>
+        <a href="#overview">旅程概覽</a>
+        <a href="#choices">福岡三選一</a>
+        <a href="#itinerary">每日行程</a>
+        <a href="#notes">行前提醒</a>
+      </nav>
+      <a class="header-action" href="kumamoto.html">切換熊本行程 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="別府溫泉、動物園長頸鹿與福岡水岸的水彩意象插畫"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow light">FAMILY ROAD TRIP · 5 DAYS / 4 NIGHTS</p>
+        <h1 id="hero-title">從大分落地，<br>一路玩到福岡。</h1>
+        <p class="hero-lead">孩子的午睡、九州自然動物園、博多的一餐好味道，都放在順路的位置。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#choices">挑選福岡方案 <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="#itinerary">查看每日行程</a>
+        </div>
+        <div class="hero-meta" aria-label="旅程資訊">
+          <span><b>02.20 — 02.24</b> <small>2027 年推定</small></span>
+          <span><b>大分 ⇄ 桃園</b> <small>IT750 / IT751</small></span>
+          <span><b>別府 1 → 福岡 2 → 別府 1</b> <small>四晚住宿</small></span>
+        </div>
+      </div>
+      <div class="hero-caption">ILLUSTRATION · BEPPU / AFRICAN SAFARI / FUKUOKA</div>
+    </section>
+
+    <section class="trip-switcher shell" id="trip-switcher" aria-labelledby="trip-switcher-title">
+      <div class="trip-switcher-heading"><p class="eyebrow">CHOOSE YOUR JOURNEY</p><h2 id="trip-switcher-title">兩條九州路線，隨時切換</h2></div>
+      <div class="trip-options">
+        <article class="trip-option is-current"><span class="trip-option-label">目前瀏覽 · 第二份行程</span><h3>大分進出・福岡兩晚</h3><p>九州自然動物園、福岡市區三方案，午睡配合長車程。</p><a href="大分福岡親子自駕五日行程_2027-02-20.pdf" target="_blank" rel="noopener">查看這份原 PDF ↗</a></article>
+        <a class="trip-option trip-option-link" href="kumamoto.html"><span class="trip-option-label">第一份行程 · 另開頁面</span><h3>熊本進出・阿蘇與別府</h3><p>草千里、由布院、九州自然動物園與熊本城。</p><span class="trip-option-action">開啟熊本行程 ↗</span></a>
+      </div>
+    </section>
+
+    <section class="overview section shell" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE JOURNEY</p>
+          <h2 id="overview-title">一趟有節奏的九州旅行</h2>
+        </div>
+        <p>只把九州自然動物園列為必去。福岡市區提供三套完整走法，現場依天氣和孩子狀況選一套。</p>
+      </div>
+      <div class="route-ribbon" aria-label="住宿順序">
+        <div><span class="route-dot">01</span><strong>大分機場</strong><small>抵達・取車</small></div>
+        <div><span class="route-dot">02</span><strong>別府</strong><small>第一晚</small></div>
+        <div class="route-highlight"><span class="route-dot">03</span><strong>自然動物園</strong><small>唯一必去</small></div>
+        <div><span class="route-dot">04</span><strong>福岡</strong><small>連住兩晚</small></div>
+        <div><span class="route-dot">05</span><strong>別府・大分</strong><small>返程緩衝</small></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">✳</span><p class="eyebrow">MUST SEE</p><h3>九州自然動物園</h3><p>Day 2 上午入園，之後前往福岡。冬季時間與山區路況出發前再查。</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">◷</span><p class="eyebrow">FAMILY RHYTHM</p><h3>長車程留給午睡</h3><p>動物園到福岡、福岡回別府兩段車程，安排在午餐後。</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">◇</span><p class="eyebrow">FOOD STOP</p><h3>極味屋地下街店</h3><p>A、C 方案排 Day 3 午餐；B 方案改晚餐。店家不接受預約。</p></article>
+      </div>
+    </section>
+
+    <section class="choices section shell" id="choices" aria-labelledby="choices-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">FUKUOKA / THREE WAYS</p><h2 id="choices-title">福岡兩晚，選你的版本</h2></div>
+        <p>三套都保留極味屋、孩子午睡與 Day 4 回別府。選取方案後，Day 3、Day 4 的時間軸與地圖同步切換。</p>
+      </div>
+      <div class="choice-grid" id="choiceCards"></div>
+      <p class="choice-footnote">B 方案的海之中道水族館：官網公告 2027 年 1 月至 4 月整修期間，海豚與海獅秀暫停。</p>
+    </section>
+
+    <section class="planner-section" id="itinerary" aria-labelledby="planner-title">
+      <div class="shell">
+        <div class="section-heading planner-heading">
+          <div><p class="eyebrow">INTERACTIVE PLANNER</p><h2 id="planner-title">每天怎麼玩，一眼看清楚</h2></div>
+          <p>選日期或切換福岡方案，時間軸與地圖會一起更新。地圖線段只表示停留順序，不代表實際道路。</p>
+        </div>
+        <div class="planner-shell">
+          <div class="planner-left">
+            <div class="day-tabs" id="dayTabs" role="tablist" aria-label="選擇日期"></div>
+            <div class="day-title-wrap">
+              <div><p class="eyebrow" id="dayKicker">全部行程</p><h3 id="dayTitle">五天四夜總覽</h3><p class="day-subtitle" id="daySubtitle">從大分機場出發，繞行別府與福岡，再返回大分。</p></div>
+              <span class="day-number" id="dayNumber" aria-hidden="true">05</span>
+            </div>
+            <div class="option-inline" id="optionInline" hidden>
+              <span>福岡方案</span>
+              <div class="segmented" id="optionSwitch" role="group" aria-label="選擇福岡方案"></div>
+            </div>
+            <div class="timeline" id="timeline" aria-live="polite"></div>
+            <div class="insight-card" id="insightCard" aria-live="polite"></div>
+          </div>
+          <aside class="map-panel" aria-label="互動行程地圖">
+            <div class="map-header"><div><p class="eyebrow">LIVE MAP</p><h3 id="mapTitle">九州旅程地圖</h3></div><button type="button" class="map-reset" id="mapReset" aria-label="重新顯示目前行程所有標記">顯示全段 ↗</button></div>
+            <div class="map-wrap">
+              <div id="map" role="application" aria-label="可縮放的九州景點地圖"></div>
+              <div class="map-fallback" id="mapFallback" hidden><strong>底圖暫時無法載入</strong><span>下方停留點仍可切換日期；時間軸的「開啟導航」可查看實際位置。</span></div>
+            </div>
+            <p class="map-disclaimer">● 景點標記可點選　━ 虛線為行程順序示意　<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">底圖：日本國土地理院「地理院タイル」</a><br><span>小縮尺海岸線資料：United States. National Imagery and Mapping Agency. “Vector Map Level 0 (VMAP0).” Bethesda, MD: Denver, CO: The Agency; USGS Information Services, 1997.</span></p>
+            <div class="map-stops" id="mapStops" aria-label="目前行程的停留點"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="notes" aria-labelledby="notes-title">
+      <div class="shell">
+        <div class="section-heading"><div><p class="eyebrow">BEFORE YOU GO</p><h2 id="notes-title">出發前，記得這幾件事</h2></div><p>行程時間是規劃緩衝，營業、航班與道路狀態以出發前官方公告為準。</p></div>
+        <div class="notes-grid">
+          <article><span class="note-count">01 / CAR</span><h3>大分機場取還車</h3><p>先訂兒童座椅、ETC，問清冬季輪胎及動物園自駕時的租車條款。Day 5 預計 13:00–13:30 還車。</p></article>
+          <article><span class="note-count">02 / WINTER</span><h3>動物園與山區天候</h3><p>冬季動物園 09:15 開園；叢林巴士採當日先到先買。遇積雪或道路管制，依園區與高速公路公告調整。</p></article>
+          <article><span class="note-count">03 / CITY</span><h3>福岡假日與候位</h3><p>推定日期中的 2 月 23 日是日本國定假日。極味屋不接受預約，福岡市區安排留有候位與交通緩衝。</p></article>
+        </div>
+        <div class="source-strip"><span>核對資訊</span><a href="https://africansafari.co.jp/information/" target="_blank" rel="noopener">自然動物園 ↗</a><a href="https://kiwamiya.com/brand/" target="_blank" rel="noopener">極味屋 ↗</a><a href="https://marine-world.jp/general-guide/hours/" target="_blank" rel="noopener">海之中道 ↗</a><a href="https://www.oita-airport.jp/access/rentacar.html" target="_blank" rel="noopener">大分機場 ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><span>KYUSHU FAMILY DRIVE · 2027</span><span>日期以 2027 年 2 月 20–24 日推定，請以訂票紀錄確認。插圖是旅行意象。</span><a href="#top">回到頂端 ↑</a></div></footer>
+</body>
+</html>

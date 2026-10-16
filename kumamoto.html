@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143d3c">
+  <meta name="description" content="熊本進出、阿蘇、由布院與別府的親子自駕五日行程。可切換每日時間軸與景點地圖。">
+  <title>九州親子自駕｜熊本・阿蘇・別府互動行程</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="kumamoto.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#itinerary">跳到行程</a>
+  <header class="site-header">
+    <div class="header-inner shell">
+      <a class="brand" href="#top" aria-label="九州親子自駕，回到頂端"><span class="brand-mark" aria-hidden="true">九</span><span><strong>KYUSHU / FAMILY</strong><small>親子自駕旅行手冊</small></span></a>
+      <nav class="desktop-nav" aria-label="主選單"><a href="#trip-switcher">切換行程</a><a href="#overview">旅程概覽</a><a href="#itinerary">每日行程</a><a href="#notes">行前提醒</a></nav>
+      <a class="header-action" href="index.html">切換福岡行程 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero kumamoto-hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="熊本城、阿蘇草原、由布院湖畔與別府溫泉的水彩意象插畫"></div><div class="hero-shade"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow light">FAMILY ROAD TRIP · 5 DAYS / 4 NIGHTS</p>
+        <h1 id="hero-title">從熊本出發，<br>穿過阿蘇到別府。</h1>
+        <p class="hero-lead">草原伸展、湖畔散步、九州自然動物園與溫泉，跟著孩子的午睡節奏走。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#itinerary">探索每日行程 <span aria-hidden="true">↘</span></a><a class="button button-ghost" href="#trip-switcher">切換另一條路線</a></div>
+        <div class="hero-meta" aria-label="旅程資訊"><span><b>5 DAYS / 4 NIGHTS</b><small>出發日期待確認</small></span><span><b>熊本 ⇄ 台中</b><small>抵達 18:15・返程 19:15</small></span><span><b>熊本 1 → 別府 2 → 熊本 1</b><small>四晚住宿</small></span></div>
+      </div>
+      <div class="hero-caption">ILLUSTRATION · KUMAMOTO / ASO / YUFUIN / BEPPU</div>
+    </section>
+
+    <section class="trip-switcher shell" id="trip-switcher" aria-labelledby="trip-switcher-title">
+      <div class="trip-switcher-heading"><p class="eyebrow">CHOOSE YOUR JOURNEY</p><h2 id="trip-switcher-title">兩條九州路線，隨時切換</h2></div>
+      <div class="trip-options">
+        <article class="trip-option is-current"><span class="trip-option-label">目前瀏覽 · 第一份行程</span><h3>熊本進出・阿蘇與別府</h3><p>草千里、由布院、九州自然動物園與熊本城。</p><a href="熊本別府親子自駕五日行程.pdf" target="_blank" rel="noopener">查看這份原 PDF ↗</a></article>
+        <a class="trip-option trip-option-link" href="index.html"><span class="trip-option-label">第二份行程 · 另開頁面</span><h3>大分進出・福岡兩晚</h3><p>九州自然動物園、福岡市區三方案，午睡配合長車程。</p><span class="trip-option-action">開啟福岡行程 ↗</span></a>
+      </div>
+    </section>
+
+    <section class="overview section shell" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading"><div><p class="eyebrow">THE JOURNEY</p><h2 id="overview-title">山、湖與溫泉之間</h2></div><p>兩段長途移動都把孩子午睡放在車上。延誤時縮短選逛景點，保留用餐與休息。</p></div>
+      <div class="route-ribbon" aria-label="住宿與行程順序">
+        <div><span class="route-dot">01</span><strong>熊本</strong><small>抵達・第一晚</small></div>
+        <div><span class="route-dot">02</span><strong>阿蘇・由布院</strong><small>草原與湖畔</small></div>
+        <div class="route-highlight"><span class="route-dot">03</span><strong>自然動物園</strong><small>別府連住兩晚</small></div>
+        <div><span class="route-dot">04</span><strong>別府・阿蘇</strong><small>車上午睡返熊本</small></div>
+        <div><span class="route-dot">05</span><strong>熊本城・機場</strong><small>市區散步與返程</small></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">✳</span><p class="eyebrow">ARRIVAL</p><h3>晚間抵達熊本</h3><p>18:15 落地後取車時間偏緊；先向租車店確認延誤與最晚交車方式。</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">◷</span><p class="eyebrow">FAMILY RHYTHM</p><h3>長途車程配午睡</h3><p>Day 2 阿蘇至由布院、Day 4 別府返熊本，都安排在午餐後。</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">◇</span><p class="eyebrow">MUST SEE</p><h3>九州自然動物園</h3><p>Day 3 上午看動物，午後回別府休息；叢林巴士與入園時間行前再確認。</p></article>
+      </div>
+    </section>
+
+    <section class="planner-section" id="itinerary" aria-labelledby="planner-title"><div class="shell">
+      <div class="section-heading planner-heading"><div><p class="eyebrow">INTERACTIVE PLANNER</p><h2 id="planner-title">選一天，沿著時間軸旅行</h2></div><p>點日期或停留點，時間軸與地圖會一起更新。虛線只表示停留順序，不是實際道路路線。</p></div>
+      <div class="planner-shell">
+        <div class="planner-left">
+          <div class="day-tabs" id="dayTabs" role="tablist" aria-label="選擇日期"></div>
+          <div class="day-title-wrap"><div><p class="eyebrow" id="dayKicker">全部行程</p><h3 id="dayTitle">五天四夜總覽</h3><p class="day-subtitle" id="daySubtitle">熊本機場進出，途經阿蘇、由布院與別府。</p></div><span class="day-number" id="dayNumber" aria-hidden="true">05</span></div>
+          <div class="timeline" id="timeline" aria-live="polite"></div>
+          <div class="insight-card" id="insightCard" aria-live="polite"></div>
+        </div>
+        <aside class="map-panel" aria-label="互動行程地圖">
+          <div class="map-header"><div><p class="eyebrow">LIVE MAP</p><h3 id="mapTitle">九州旅程地圖</h3></div><button type="button" class="map-reset" id="mapReset" aria-label="重新顯示目前行程所有標記">顯示全段 ↗</button></div>
+          <div class="map-wrap"><div id="map" role="application" aria-label="可縮放的九州景點地圖"></div><div class="map-fallback" id="mapFallback" hidden><strong>底圖暫時無法載入</strong><span>下方停留點仍可切換日期；時間軸的「開啟導航」可查看實際位置。</span></div></div>
+          <p class="map-disclaimer">● 景點標記可點選　━ 虛線為行程順序示意　<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">底圖：日本國土地理院「地理院タイル」</a><br><span>小縮尺海岸線資料：United States. National Imagery and Mapping Agency. “Vector Map Level 0 (VMAP0).” Bethesda, MD: Denver, CO: The Agency; USGS Information Services, 1997.</span></p>
+          <div class="map-stops" id="mapStops" aria-label="目前行程的停留點"></div>
+        </aside>
+      </div>
+    </div></section>
+
+    <section class="notes-section" id="notes" aria-labelledby="notes-title"><div class="shell">
+      <div class="section-heading"><div><p class="eyebrow">BEFORE YOU GO</p><h2 id="notes-title">出發前，先把這些確認好</h2></div><p>原行程未指定出發日期；航班、營業與路況資訊都要以實際出發日重新確認。</p></div>
+      <div class="notes-grid">
+        <article><span class="note-count">01 / CAR</span><h3>熊本機場晚間取車</h3><p>18:15 抵達後要入境、領行李、接駁及安裝兒童座椅。預訂時確認最晚交車、航班延誤保留車輛與接駁方式。</p></article>
+        <article><span class="note-count">02 / FAMILY</span><h3>座椅、住宿與證件</h3><p>依孩子身形預約座椅；備妥台灣駕照與日文譯本。熊本與別府住宿都確認停車位、嬰兒床和幼兒使用浴場規定。</p></article>
+        <article><span class="note-count">03 / WEATHER</span><h3>阿蘇山區留彈性</h3><p>Day 2、Day 4 都是長途日。若天候或車程延誤，先縮短由布院散步或海地獄停留。</p></article>
+      </div>
+      <div class="source-strip"><span>原行程與查核</span><a href="熊本別府親子自駕五日行程.pdf" target="_blank" rel="noopener">查看原 PDF ↗</a><span>原稿資料查核：2026-10-12；訂車與出發前請重新確認。</span></div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>KYUSHU FAMILY DRIVE · KUMAMOTO</span><span>出發日期未定；插圖為旅行意象，地圖標記為停留點位置。</span><a href="#top">回到頂端 ↑</a></div></footer>
+</body>
+</html>
