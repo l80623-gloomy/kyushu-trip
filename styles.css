@@ -28,3 +28,11 @@
 .trip-option a:hover{text-decoration:underline}
 @media(max-width:700px){.trip-switcher-heading{display:block}.trip-options{grid-template-columns:1fr}.trip-switcher{padding-top:32px;padding-bottom:35px}.trip-option{min-height:0;padding:20px}.trip-option h3{font-size:16px}}
 #overview + #choices{padding-top:20px;padding-bottom:60px}
+
+/* Kumamoto Day 4 route choice and linked Day 5 note */
+#day4OptionWrap,#day5OptionWrap{display:block}
+#day4OptionWrap[hidden],#day5OptionWrap[hidden]{display:none}
+#day4OptionWrap strong,#day5OptionWrap strong{display:block;font-size:12px;margin-bottom:10px;color:var(--ink)}
+#day4OptionWrap .segmented,#day5OptionWrap .segmented{display:inline-flex;flex-wrap:wrap;gap:3px}
+#day4OptionWrap small,#day5OptionWrap small{display:block;margin-top:8px;color:var(--muted);font-size:11px;line-height:1.55}
+@media(max-width:570px){#day4OptionWrap .segmented,#day5OptionWrap .segmented{display:flex}#day4OptionWrap .segmented button,#day5OptionWrap .segmented button{flex:1;min-width:125px}}
