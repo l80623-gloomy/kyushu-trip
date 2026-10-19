@@ -109,7 +109,7 @@ const OVERVIEW=[
   {title:"大觀峰或高速返熊本",desc:"兩條路線可切換；市區時間不同。"},
   {title:"熊本市區與返程",desc:"依 Day 4 是否逛城，換不同景點。"}
 ];
-let activeDay=0,activeDay4="scenic",activeDay5="scenic",activePlace=null,map=null,markers=[],routeLine=null;
+let activeDay=0,activeDay4="scenic",activeDay5="scenic",activePlace=null,map=null,markers=[],routeLine=null,overviewOptionsOpen=false;
 const $=id=>document.getElementById(id);
 const dayData=day=>day===4?DAY4[activeDay4]:day===5?{...DAY5[activeDay5],events:[...DAY5[activeDay5].events,...RETURN_EVENTS]}:DAYS[day];
 const uniquePlaces=events=>[...new Set(events.map(e=>e.place).filter(Boolean))];
@@ -145,7 +145,7 @@ const priorityBadge=event=>{
 function overviewChoice(){
   const day4=activeDay4==="scenic"?"景觀線・大觀峰":"高速線・熊本城";
   const day5=activeDay5==="scenic"?"熊本城・城彩苑":"水前寺・街區";
-  return `<div class="choice-summary"><span>目前選擇</span><strong>Day 4｜${day4}</strong><strong>Day 5｜${day5}</strong><button type="button" data-overview-day="4">調整路線 ↗</button></div>`;
+  return `<div class="choice-summary"><span>目前選擇</span><strong>Day 4｜${day4}</strong><strong>Day 5｜${day5}</strong><button type="button" data-toggle-overview-options aria-expanded="${overviewOptionsOpen}">${overviewOptionsOpen?"收起選項 ↑":"調整路線 ↓"}</button><div class="overview-route-options" ${overviewOptionsOpen?"":"hidden"}><div><small>Day 4 回熊本</small><div class="segmented"><button type="button" data-overview-day4-option="scenic" aria-pressed="${activeDay4==="scenic"}">景觀線・大觀峰</button><button type="button" data-overview-day4-option="highway" aria-pressed="${activeDay4==="highway"}">高速線・熊本城</button></div></div><div><small>Day 5 熊本市區</small><div class="segmented"><button type="button" data-overview-day5-option="scenic" aria-pressed="${activeDay5==="scenic"}">熊本城・城彩苑</button><button type="button" data-overview-day5-option="highway" aria-pressed="${activeDay5==="highway"}">水前寺・街區</button></div></div><p>選項會直接更新總覽與地圖，不會離開本頁。</p></div></div>`;
 }
 function renderTabs(){
   $("dayTabs").innerHTML=["總覽","Day 1","Day 2","Day 3","Day 4","Day 5"].map((label,day)=>`<button type="button" class="day-tab" role="tab" aria-selected="${day===activeDay}" data-day="${day}">${label}<small>${["5 DAYS","機場過夜","阿蘇・由布院","動物園・海地獄","兩線擇一","熊本・返程"][day]}</small></button>`).join("");
@@ -165,6 +165,9 @@ function renderTimeline(){
     $("copyDayButton").hidden=true;
     $("timeline").innerHTML=overviewChoice()+OVERVIEW.map((item,i)=>`<button type="button" class="overview-day" data-overview-day="${i+1}"><span class="overview-date">DAY ${i+1}</span><span><strong>${item.title}</strong><small>${item.desc}</small></span><span class="arrow" aria-hidden="true">↗</span></button>`).join("");
     $("timeline").querySelectorAll("[data-overview-day]").forEach(b=>b.addEventListener("click",()=>setDay(Number(b.dataset.overviewDay))));
+    $("timeline").querySelector("[data-toggle-overview-options]").addEventListener("click",()=>{overviewOptionsOpen=!overviewOptionsOpen;renderTimeline();});
+    $("timeline").querySelectorAll("[data-overview-day4-option]").forEach(b=>b.addEventListener("click",()=>setDay4Option(b.dataset.overviewDay4Option)));
+    $("timeline").querySelectorAll("[data-overview-day5-option]").forEach(b=>b.addEventListener("click",()=>setDay5Option(b.dataset.overviewDay5Option)));
     $("insightCard").innerHTML="<strong>這趟行程的節奏</strong><p>Day 1 機場周邊過夜、Day 2 早上取車。Day 4 可切換景觀線或高速線，Day 5 會隨之更換熊本景點。</p>";
     return;
   }
