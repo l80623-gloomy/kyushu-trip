@@ -37,6 +37,7 @@ body.is-ja{font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
 .dialog-close{position:absolute;right:13px;top:13px;z-index:2;width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--deep);font-size:22px;line-height:1}
 .place-art{height:275px;background-image:url("kumamoto-attraction-watercolor-v1.png");background-size:300% auto;background-repeat:no-repeat}
 .place-art.scene-aso{background-position:left center}.place-art.scene-beppu{background-position:center center}.place-art.scene-kumamoto{background-position:right center}
+.place-art.scene-strawberry{background-image:url("kumamoto-strawberry-watercolor-v1.png");background-size:cover;background-position:center}
 .place-art[hidden]{display:none}
 .place-art[data-place="shirakawa"]{background-position:left 78%}
 .place-art[data-place="kusasenri"],.place-art[data-place="crater"],.place-art[data-place="daikanbo"]{background-position:left 20%}
