@@ -42,6 +42,7 @@ body.is-ja{font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
 .place-art.scene-strawberry{background-image:url("kumamoto-strawberry-watercolor-v1.png");background-size:cover;background-position:center}
 .place-art.scene-still-hotel{background-image:url("kumamoto-still-hotel-watercolor-v1.png");background-size:cover;background-position:center}
 .place-art.scene-beppu-hotel{background-image:url("beppu-kanko-hotel-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-asogen{background-image:url("minshuku-asogen-watercolor-v1.png");background-size:cover;background-position:center}
 .place-art[hidden]{display:none}
 .place-art[data-place="shirakawa"]{background-position:left 78%}
 .place-art[data-place="kusasenri"],.place-art[data-place="crater"],.place-art[data-place="daikanbo"]{background-position:left 20%}

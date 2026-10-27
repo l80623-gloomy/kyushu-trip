@@ -35,7 +35,7 @@ const PLACE_INFO={
   safari:{scene:"beppu",priority:"本行程必去",priority_ja:"この旅のメイン",level:"must",stay:"2.5–3 小時",stay_ja:"2.5〜3時間",description:"九州自然動物園是全程核心景點，可選自駕動物區或叢林巴士，再到互動區近距離看動物。",description_ja:"九州自然動物公園アフリカンサファリはこの旅のメインです。マイカーで回るサファリゾーンかジャングルバスを選び、その後ふれあいエリアで動物を間近に見ます。",family:"先查當季開園和巴士班次；車上備水與簡單點心，離園前先上廁所。",family_ja:"その季節の開園時間とバスの運行を事前に確認します。車内に水と軽いおやつを用意し、退園前にトイレを済ませます。"},
   umi:{scene:"beppu",priority:"延誤可縮短",priority_ja:"遅れたら短縮",level:"optional",stay:"60–75 分鐘",stay_ja:"60〜75分",description:"海地獄以鈷藍色溫泉池和蒸氣景觀為主，單點參觀即可，不需要為了集章走完整套地獄巡禮。",description_ja:"海地獄はコバルトブルーの温泉池と湯けむりが見どころです。ここだけの見学で十分で、スタンプ集めのために地獄めぐりを全部回る必要はありません。",family:"園內蒸氣和熱水區注意孩子動線；動物園玩太久時縮短停留。",family_ja:"園内には湯けむりや熱湯のエリアがあるため、子どもの動きに注意します。動物公園で長く過ごした場合は滞在を短縮します。"},
   takegawara:{scene:"beppu",priority:"有精神再去",priority_ja:"余力があれば",level:"optional",stay:"30–60 分鐘",stay_ja:"30〜60分",description:"竹瓦溫泉周邊保留別府舊城氣氛，適合傍晚散步並接市區晚餐。",description_ja:"竹瓦温泉の周辺には別府の古い町並みの雰囲気が残っており、夕方に散策してそのまま市街で夕食をとるのに向いています。",family:"孩子累了就取消散步，直接在飯店附近吃飯。",family_ja:"子どもが疲れていたら散策はやめて、ホテルの近くで食事をします。"},
-  aso_onsen:{scene:"aso",priority:"Day 3 C 路線住宿",priority_ja:"Day 3 C ルートの宿泊",level:"core",stay:"16:00 起入住・10:00 前退房",stay_ja:"16:00からチェックイン・10:00までにチェックアウト",description:"Day 3 C 路線確定入住民宿あそげん，位於阿蘇市乙姬、國道 57 號沿線。民宿主打阿蘇在地食材與鄉土料理，適合結束長途移動後留在館內休息。",description_ja:"Day 3 の C ルートでは、阿蘇市乙姫の国道57号沿いにある民宿あそげんに宿泊します。阿蘇の食材を使った郷土料理が特徴で、長い移動の後は館内でゆっくり過ごせます。",family:"訂房時確認幼兒的餐食、寢具及費用方案；若預訂含晚餐方案，要預留 16:00 後入住與用餐時間。",family_ja:"予約時に幼児の食事・寝具・料金プランを確認します。夕食付きプランの場合は、16:00以降のチェックインと食事の時間に余裕を持たせます。"},
+  aso_onsen:{scene:"asogen",priority:"Day 3 C 路線住宿",priority_ja:"Day 3 C ルートの宿泊",level:"core",stay:"16:00 起入住・10:00 前退房",stay_ja:"16:00からチェックイン・10:00までにチェックアウト",description:"Day 3 C 路線確定入住民宿あそげん，位於阿蘇市乙姬、國道 57 號沿線。民宿主打阿蘇在地食材與鄉土料理，適合結束長途移動後留在館內休息。",description_ja:"Day 3 の C ルートでは、阿蘇市乙姫の国道57号沿いにある民宿あそげんに宿泊します。阿蘇の食材を使った郷土料理が特徴で、長い移動の後は館内でゆっくり過ごせます。",family:"訂房時確認幼兒的餐食、寢具及費用方案；若預訂含晚餐方案，要預留 16:00 後入住與用餐時間。",family_ja:"予約時に幼児の食事・寝具・料金プランを確認します。夕食付きプランの場合は、16:00以降のチェックインと食事の時間に余裕を持たせます。"},
   strawberry:{scene:"strawberry",priority:"C 路線重點",priority_ja:"C ルートの見どころ",level:"flex",stay:"約 60 分鐘",stay_ja:"約60分",description:"阿蘇健康農園安排在 C 路線的早晨，從民宿あそげん退房後先採草莓，再一路往熊本市區。",description_ja:"阿蘇健康農園は C ルートの朝に組み込んでいます。民宿あそげんをチェックアウトした後にいちご狩りを楽しみ、そのまま熊本市街へ向かいます。",family:"出發前確認當季採果開放日、最後入園時間、是否需要預約與幼兒收費規則；溫室內可準備薄外套與濕紙巾。",family_ja:"出発前に、その季節のいちご狩りの営業日、最終受付時間、予約の要否、幼児の料金を確認します。ハウス内に備えて、薄手の上着とウェットティッシュを用意します。"},
   daikanbo:{scene:"aso",priority:"景觀線選項",priority_ja:"景観ルート限定",level:"flex",stay:"30–40 分鐘",stay_ja:"30〜40分",description:"大觀峰位於阿蘇北外輪山，可從不同角度眺望阿蘇五岳，是避免重複草千里的中繼站。",description_ja:"大観峰は阿蘇の北外輪山にあり、草千里ヶ浜とは違う角度から阿蘇五岳を望めます。草千里ヶ浜と景色が重ならないように選んだ、途中の立ち寄り先です。",family:"濃霧、強風或下雨時景觀價值大幅下降，可直接取消改回熊本。",family_ja:"濃霧・強風・雨の日は眺望がほとんど期待できないため、立ち寄らずにそのまま熊本へ向かいます。"},
   kumamoto:{scene:"kumamoto",priority:"住宿基地",priority_ja:"宿泊拠点",level:"core",stay:"依入住安排",stay_ja:"チェックインの時間に合わせて",description:"熊本市區最後一晚以停車、入住、晚餐與整理行李為主，景點安排依 Day 4 路線調整。",description_ja:"熊本市街での最後の夜は、駐車・チェックイン・夕食・荷物の整理が中心です。観光の予定は Day 4 のルートによって変わります。",family:"先確認飯店停車和入住時間，避免帶著孩子繞市區找車位。",family_ja:"ホテルの駐車場とチェックイン時間を事前に確認し、子ども連れで駐車場を探し回らないようにします。"},
@@ -154,7 +154,7 @@ const DAY3={beppu:DAYS[3],aso:{title:"九州自然動物園 → 海地獄 → �
   {time:"12:15–13:05",title:"往海地獄・短車程午睡",title_ja:"海地獄へ・短い移動中に昼寝",detail:"車程先抓 35–50 分鐘；孩子若仍在睡，可縮短海地獄停留。",detail_ja:"移動は約35〜50分。子どもがまだ寝ていれば、海地獄の滞在を短くします。",place:"umi",tag:"午睡機會",tag_ja:"昼寝のチャンス"},
   {time:"13:15–14:00",title:"海地獄短逛",title_ja:"海地獄を短時間見学",detail:"保留海地獄單點，不排七地獄巡禮；為阿蘇飯店入住時間留緩衝。",detail_ja:"海地獄だけを見学し、地獄めぐりはしません。阿蘇のホテルのチェックインに間に合うよう、余裕を持たせます。",place:"umi"},
   {time:"14:00–16:15",title:"前往民宿あそげん・車上午睡",title_ja:"民宿あそげんへ・車内で昼寝",detail:"先抓約 2 小時至 2 小時 30 分；實際依山路、休息與當日導航調整。",detail_ja:"約2時間〜2時間30分を見込んでいます。山道・休憩・当日のナビに合わせて調整します。",place:"aso_onsen",tag:"午睡",tag_ja:"昼寝"},
-  {time:"16:30",title:"民宿あそげん入住",title_ja:"民宿あそげんにチェックイン",detail:"官方入住時間為 16:00 起；地址為阿蘇市乙姬 1506。",detail_ja:"チェックインは16:00から。住所は阿蘇市乙姫1506です。",place:"aso_onsen",tag:"C 路線住宿",tag_ja:"C ルートの宿泊"},
+  {time:"16:30",title:"民宿あそげん入住",title_ja:"民宿あそげんにチェックイン",detail:"官方入住時間為 16:00 起；地址為阿蘇市乙姬 1506。",detail_ja:"チェックインは16:00から。住所は阿蘇市乙姫1506です。",place:"aso_onsen",illustrated:true,tag:"C 路線住宿",tag_ja:"C ルートの宿泊"},
   {time:"傍晚",time_ja:"夕方",title:"民宿晚餐、浴池與休息",title_ja:"民宿で夕食・入浴・休憩",detail:"依預訂方案享用阿蘇鄉土料理；不再安排別府市區行程，晚上留給孩子休息。",detail_ja:"予約プランに合わせて阿蘇の郷土料理を楽しみます。別府市街の予定は入れず、夜は子どもとゆっくり休みます。",place:"aso_onsen"}
 ]}};
 const baseDayData=day=>day===3?DAY3[activeDay3]:day===4?DAY4[activeDay4]:day===5?{...DAY5[activeDay5],events:[...DAY5[activeDay5].events,...RETURN_EVENTS]}:DAYS[day];
@@ -263,7 +263,7 @@ function openPlaceInfo(id,eventIndex){
   const place=PLACES[id],info=PLACE_INFO[id];if(!place||!info)return;
   const event=Number.isInteger(eventIndex)&&activeDay>0?dayData(activeDay).events[eventIndex]:null;
   const attraction=event?isAttractionEvent(event):isAttractionPlace(id);
-  const lodging=ILLUSTRATED_INFO_PLACES.has(id);
+  const lodging=ILLUSTRATED_INFO_PLACES.has(id)&&(id!=="aso_onsen"||event?.illustrated===true);
   const illustrated=attraction||lodging;
   highlightPlace(id,false);
   const dialog=$("placeDialog"),art=$("placeDialogArt"),priority=$("placeDialogPriority");
