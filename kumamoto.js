@@ -1,17 +1,19 @@
 /* Stops are shown in travel order. Dashed map lines are not driving routes. */
 /* Japanese text sits next to the Chinese as *_ja fields; a missing *_ja falls back to Chinese. */
 const PLACES={
-  airport:{name:"阿蘇熊本機場",lat:32.8372,lng:130.8553,query:"阿蘇熊本機場",area:"第一晚飯店待定・機場周邊"},
+  airport:{name:"阿蘇熊本機場",lat:32.8372,lng:130.8553,query:"阿蘇熊本機場",area:"抵達、用餐與租車"},
+  still_hotel:{name:"THE STILL HOTEL",lat:32.8781399,lng:130.8663223,query:"THE STILL HOTEL 熊本 大津町",area:"Day 1 住宿・肥後大津站旁"},
   shirakawa:{name:"白川水源",lat:32.8231,lng:131.0873,query:"白川水源",area:"南阿蘇"},
   kusasenri:{name:"阿蘇草千里",lat:32.8818,lng:131.0538,query:"草千里ヶ浜",area:"阿蘇山"},
   crater:{name:"阿蘇火山口",lat:32.8846,lng:131.0857,query:"阿蘇中岳火口",area:"僅開放時可前往"},
   aso:{name:"阿蘇午餐區域",lat:32.9373,lng:131.0801,query:"阿蘇市 餐廳",area:"阿蘇"},
   yufuin:{name:"由布院・金鱗湖",lat:33.2667,lng:131.369,query:"金鱗湖",area:"由布院"},
   beppu:{name:"別府市區",lat:33.2796,lng:131.5002,query:"別府駅",area:"住宿與晚餐區域"},
+  beppu_hotel:{name:"Beppu Kanko Hotel Ace",lat:33.2920944,lng:131.4604677,query:"Beppu Kanko Hotel Ace",area:"Day 2、Day 3 住宿・別府 IC 附近"},
   safari:{name:"九州自然動物園",lat:33.3549,lng:131.4112,query:"九州自然動物公園 アフリカンサファリ",area:"必去"},
   umi:{name:"海地獄",lat:33.3134,lng:131.4712,query:"海地獄",area:"別府地獄"},
   takegawara:{name:"竹瓦溫泉周邊",lat:33.2779,lng:131.507,query:"竹瓦温泉",area:"別府市區"},
-  aso_onsen:{name:"阿蘇溫泉飯店（待定）",lat:32.9566,lng:131.0564,query:"阿蘇 內牧溫泉",area:"阿蘇／內牧溫泉區"},
+  aso_onsen:{name:"民宿あそげん",lat:32.934736,lng:131.0402001,query:"民宿あそげん 阿蘇",area:"Day 3 C 路線住宿・阿蘇市乙姬"},
   strawberry:{name:"阿蘇健康農園・採草莓",lat:32.8928795,lng:131.0043561,query:"阿蘇健康農園",area:"阿蘇市"},
   daikanbo:{name:"大觀峰",lat:32.9962,lng:131.0674,query:"大観峰",area:"阿蘇北外輪山"},
   kumamoto:{name:"熊本市區",lat:32.8034,lng:130.7100,query:"熊本市中央區",area:"第二次住宿區域"},
@@ -19,20 +21,22 @@ const PLACES={
   suizenji:{name:"水前寺成趣園",lat:32.7908,lng:130.7343,query:"水前寺成趣園",area:"熊本市區"},
   shopping:{name:"上通・下通",lat:32.8028,lng:130.7096,query:"熊本 下通商店街",area:"熊本市中心"}
 };
-const JA_PLACE_NAMES={airport:"阿蘇くまもと空港",shirakawa:"白川水源",kusasenri:"草千里ヶ浜",crater:"阿蘇中岳火口",aso:"阿蘇の昼食エリア",yufuin:"由布院・金鱗湖",beppu:"別府市街",safari:"九州自然動物公園アフリカンサファリ",umi:"海地獄",takegawara:"竹瓦温泉周辺",aso_onsen:"阿蘇の温泉ホテル（未定）",strawberry:"阿蘇健康農園・いちご狩り",daikanbo:"大観峰",kumamoto:"熊本市街",castle:"熊本城・桜の馬場 城彩苑",suizenji:"水前寺成趣園",shopping:"上通・下通"};
+const JA_PLACE_NAMES={airport:"阿蘇くまもと空港",still_hotel:"THE STILL HOTEL",shirakawa:"白川水源",kusasenri:"草千里ヶ浜",crater:"阿蘇中岳火口",aso:"阿蘇の昼食エリア",yufuin:"由布院・金鱗湖",beppu:"別府市街",beppu_hotel:"別府観光ホテル エース",safari:"九州自然動物公園アフリカンサファリ",umi:"海地獄",takegawara:"竹瓦温泉周辺",aso_onsen:"民宿あそげん",strawberry:"阿蘇健康農園・いちご狩り",daikanbo:"大観峰",kumamoto:"熊本市街",castle:"熊本城・桜の馬場 城彩苑",suizenji:"水前寺成趣園",shopping:"上通・下通"};
 const PLACE_INFO={
-  airport:{scene:"kumamoto",priority:"必要節點",priority_ja:"重要な拠点",level:"core",stay:"用餐 40–50 分鐘",stay_ja:"食事 40〜50分",description:"第一晚的任務是順利吃飯和休息。航廈一樓及そらよかダイニング有抵達旅客可使用的餐飲選擇。",description_ja:"初日の目的は、無事に食事をとって休むことです。ターミナル1階や「そらよかダイニング」に、到着後も利用できる飲食店があります。",family:"先準備延誤時可直接吃的輕食；飯店確定後補上接駁末班時間。",family_ja:"遅延に備えて、すぐ食べられる軽食を用意しておきます。ホテルが決まり次第、送迎の最終便の時刻を追記します。"},
+  airport:{scene:"kumamoto",priority:"必要節點",priority_ja:"重要な拠点",level:"core",stay:"用餐 40–50 分鐘",stay_ja:"食事 40〜50分",description:"第一晚的任務是順利吃飯和前往住宿。航廈一樓及そらよかダイニング有抵達旅客可使用的餐飲選擇。",description_ja:"初日の目的は、無事に食事をとって宿泊先へ向かうことです。ターミナル1階や「そらよかダイニング」に、到着後も利用できる飲食店があります。",family:"先準備延誤時可直接吃的輕食，並確認前往肥後大津站的空港 Liner 末班車。",family_ja:"遅延に備えて、すぐ食べられる軽食を用意し、肥後大津駅行き空港ライナーの最終便を確認します。"},
+  still_hotel:{scene:"still-hotel",priority:"Day 1 住宿",priority_ja:"Day 1 の宿泊",level:"core",stay:"入住後休息",stay_ja:"チェックイン後は休憩",description:"第一晚確定入住 THE STILL HOTEL，位於肥後大津站旁。從阿蘇熊本機場可搭空港 Liner 前往肥後大津站，再步行約 1 分鐘；晚間務必先確認末班車。",description_ja:"初日は肥後大津駅前の THE STILL HOTEL に宿泊します。阿蘇くまもと空港から空港ライナーで肥後大津駅へ行き、駅から徒歩約1分です。夜は最終便を事前に確認します。",family:"飯店客房未提供嬰兒床或加床的資訊，訂房前應再次確認房型、床寬與幼兒同睡規則；錯過接駁時改搭計程車。",family_ja:"ベビーベッドやエキストラベッドの案内は確認できないため、予約前に部屋タイプ・ベッド幅・添い寝条件を確認します。空港ライナーに間に合わない場合はタクシーを利用します。"},
   shirakawa:{scene:"aso",priority:"建議保留",priority_ja:"おすすめ",level:"flex",stay:"30–40 分鐘",stay_ja:"30〜40分",description:"南阿蘇代表性的清澈湧泉，水邊與樹蔭形成舒服的短程散步，適合早上取車後先讓孩子活動。",description_ja:"南阿蘇を代表する澄んだ湧き水です。水辺と木陰を歩く短い散策が心地よく、朝にレンタカーを受け取った後、子どもが体を動かすのにちょうどよい場所です。",family:"石板和水邊可能濕滑，推車遇階差時改用揹帶較省力。",family_ja:"石畳や水辺は滑りやすいことがあります。段差ではベビーカーより抱っこひもが楽です。"},
   kusasenri:{scene:"aso",priority:"建議保留",priority_ja:"おすすめ",level:"flex",stay:"40–50 分鐘",stay_ja:"40〜50分",description:"阿蘇火山地形中的大片草原，視野開闊，適合在長途行車前後伸展。天候變化會直接影響體感與能見度。",description_ja:"阿蘇の火山地形に広がる大草原で、見晴らしが抜群です。長距離ドライブの前後に体を伸ばすのに向いています。天候によって体感温度や視界が大きく変わります。",family:"風大時加外套；停車、上廁所與走到草原都要算進停留時間。",family_ja:"風が強い日は上着を一枚追加します。駐車、トイレ、草原までの移動も滞在時間に含めて考えます。"},
   crater:{scene:"aso",priority:"開放才考慮",priority_ja:"開放時のみ",level:"optional",stay:"30–45 分鐘",stay_ja:"30〜45分",description:"中岳火山口景觀很有震撼力，但會因火山活動、氣體、道路和天候臨時管制，目前不能當成固定行程。",description_ja:"中岳火口の景観は迫力がありますが、火山活動・火山ガス・道路状況・天候によって急に規制されることがあるため、現時点では確定の予定に入れていません。",family:"出發前與抵達山上時各查一次官方狀態；不開放就直接用餐。",family_ja:"出発前と山上に着いた時点で、それぞれ公式の規制情報を確認します。入れない場合はそのまま昼食にします。"},
   aso:{scene:"aso",priority:"必要休息",priority_ja:"必須の休憩",level:"core",stay:"45–60 分鐘",stay_ja:"45〜60分",description:"阿蘇午餐是 Day 2 與景觀線 Day 4 的節奏轉換點，先讓孩子吃飽，再把較長車程接下午睡。",description_ja:"阿蘇での昼食は、Day 2 と Day 4（景観ルート）の流れの切り替えポイントです。先に子どもにしっかり食べさせ、その後の長めの移動を昼寝の時間にあてます。",family:"選有停車場、兒童椅和能快速出餐的店，比追熱門名店更實際。",family_ja:"人気店を狙うより、駐車場と子ども用の椅子があり、料理がすぐ出るお店を選ぶほうが現実的です。"},
   yufuin:{scene:"beppu",priority:"延誤可縮短",priority_ja:"遅れたら短縮",level:"optional",stay:"40–60 分鐘",stay_ja:"40〜60分",description:"金鱗湖與湯之坪街道適合輕鬆散步，但 Day 2 已有多段山路，因此把它當成可伸縮的午後停留。",description_ja:"金鱗湖と湯の坪街道は気軽な散策に向いています。ただし Day 2 は山道の移動が多いため、午後の立ち寄りは時間を調整しやすい予定にしています。",family:"湖畔與街道擇一即可；遇塞車或孩子仍在睡就縮成 20–30 分鐘。",family_ja:"湖畔か街道のどちらか一方で十分です。渋滞したときや子どもがまだ寝ているときは 20〜30分に短縮します。"},
   beppu:{scene:"beppu",priority:"住宿基地",priority_ja:"宿泊拠点",level:"core",stay:"依用餐安排",stay_ja:"食事の予定に合わせて",description:"別府連住兩晚，市區可安排冷麵、唐揚、豐後牛，也能依孩子體力只在飯店周邊散步。",description_ja:"別府には2連泊します。市街では冷麺・唐揚げ・豊後牛などを楽しめ、子どもの体力次第でホテル周辺の散策だけにすることもできます。",family:"熱門餐廳先查候位方式；晚餐排隊太久就改定食或外帶。",family_ja:"人気店は事前に順番待ちの方法を確認します。夕食の行列が長すぎる場合は、定食やテイクアウトに切り替えます。"},
+  beppu_hotel:{scene:"beppu-hotel",priority:"Day 2、3 住宿",priority_ja:"Day 2・3 の宿泊",level:"core",stay:"連住兩晚",stay_ja:"2連泊",description:"別府住宿確定為 Beppu Kanko Hotel Ace，位於別府 IC 附近，適合自駕進出由布院、九州自然動物園與海地獄。",description_ja:"別府では別府観光ホテル エースに2連泊します。別府ICの近くにあり、由布院・九州自然動物公園・海地獄へ車で移動しやすい立地です。",family:"飯店有停車場；入住前再確認幼兒同睡、早餐、晚間餐飲與大浴場等實際訂房條件。",family_ja:"駐車場があります。予約前に、幼児の添い寝・朝食・夜の食事・大浴場など、実際の宿泊条件を確認します。"},
   safari:{scene:"beppu",priority:"本行程必去",priority_ja:"この旅のメイン",level:"must",stay:"2.5–3 小時",stay_ja:"2.5〜3時間",description:"九州自然動物園是全程核心景點，可選自駕動物區或叢林巴士，再到互動區近距離看動物。",description_ja:"九州自然動物公園アフリカンサファリはこの旅のメインです。マイカーで回るサファリゾーンかジャングルバスを選び、その後ふれあいエリアで動物を間近に見ます。",family:"先查當季開園和巴士班次；車上備水與簡單點心，離園前先上廁所。",family_ja:"その季節の開園時間とバスの運行を事前に確認します。車内に水と軽いおやつを用意し、退園前にトイレを済ませます。"},
   umi:{scene:"beppu",priority:"延誤可縮短",priority_ja:"遅れたら短縮",level:"optional",stay:"60–75 分鐘",stay_ja:"60〜75分",description:"海地獄以鈷藍色溫泉池和蒸氣景觀為主，單點參觀即可，不需要為了集章走完整套地獄巡禮。",description_ja:"海地獄はコバルトブルーの温泉池と湯けむりが見どころです。ここだけの見学で十分で、スタンプ集めのために地獄めぐりを全部回る必要はありません。",family:"園內蒸氣和熱水區注意孩子動線；動物園玩太久時縮短停留。",family_ja:"園内には湯けむりや熱湯のエリアがあるため、子どもの動きに注意します。動物公園で長く過ごした場合は滞在を短縮します。"},
   takegawara:{scene:"beppu",priority:"有精神再去",priority_ja:"余力があれば",level:"optional",stay:"30–60 分鐘",stay_ja:"30〜60分",description:"竹瓦溫泉周邊保留別府舊城氣氛，適合傍晚散步並接市區晚餐。",description_ja:"竹瓦温泉の周辺には別府の古い町並みの雰囲気が残っており、夕方に散策してそのまま市街で夕食をとるのに向いています。",family:"孩子累了就取消散步，直接在飯店附近吃飯。",family_ja:"子どもが疲れていたら散策はやめて、ホテルの近くで食事をします。"},
-  aso_onsen:{scene:"aso",priority:"住宿分支",priority_ja:"宿泊の選択肢",level:"core",stay:"入住後休息",stay_ja:"チェックイン後は休憩",description:"這是 Day 3 的 C 路線住宿基地，先以阿蘇／內牧溫泉區為導航參考；確定飯店後再替換成實際位置。",description_ja:"Day 3 の C ルートで泊まる拠点です。ひとまず阿蘇・内牧温泉エリアをナビの目安にしており、ホテルが決まり次第、実際の場所に差し替えます。",family:"自然動物園結束後車程較長，先在園內完成午餐、上廁所與補水，下午以車上午睡和飯店溫泉休息為主。",family_ja:"動物公園を出てからの移動が長いため、園内で昼食・トイレ・水分補給を済ませます。午後は車内での昼寝とホテルの温泉でゆっくり過ごします。"},
-  strawberry:{scene:"strawberry",priority:"C 路線重點",priority_ja:"C ルートの見どころ",level:"flex",stay:"約 60 分鐘",stay_ja:"約60分",description:"阿蘇健康農園安排在 C 路線的早晨，從阿蘇溫泉飯店退房後先採草莓，再一路往熊本市區。",description_ja:"阿蘇健康農園は C ルートの朝に組み込んでいます。阿蘇の温泉ホテルをチェックアウトした後にいちご狩りを楽しみ、そのまま熊本市街へ向かいます。",family:"出發前確認當季採果開放日、最後入園時間、是否需要預約與幼兒收費規則；溫室內可準備薄外套與濕紙巾。",family_ja:"出発前に、その季節のいちご狩りの営業日、最終受付時間、予約の要否、幼児の料金を確認します。ハウス内に備えて、薄手の上着とウェットティッシュを用意します。"},
+  aso_onsen:{scene:"aso",priority:"Day 3 C 路線住宿",priority_ja:"Day 3 C ルートの宿泊",level:"core",stay:"16:00 起入住・10:00 前退房",stay_ja:"16:00からチェックイン・10:00までにチェックアウト",description:"Day 3 C 路線確定入住民宿あそげん，位於阿蘇市乙姬、國道 57 號沿線。民宿主打阿蘇在地食材與鄉土料理，適合結束長途移動後留在館內休息。",description_ja:"Day 3 の C ルートでは、阿蘇市乙姫の国道57号沿いにある民宿あそげんに宿泊します。阿蘇の食材を使った郷土料理が特徴で、長い移動の後は館内でゆっくり過ごせます。",family:"訂房時確認幼兒的餐食、寢具及費用方案；若預訂含晚餐方案，要預留 16:00 後入住與用餐時間。",family_ja:"予約時に幼児の食事・寝具・料金プランを確認します。夕食付きプランの場合は、16:00以降のチェックインと食事の時間に余裕を持たせます。"},
+  strawberry:{scene:"strawberry",priority:"C 路線重點",priority_ja:"C ルートの見どころ",level:"flex",stay:"約 60 分鐘",stay_ja:"約60分",description:"阿蘇健康農園安排在 C 路線的早晨，從民宿あそげん退房後先採草莓，再一路往熊本市區。",description_ja:"阿蘇健康農園は C ルートの朝に組み込んでいます。民宿あそげんをチェックアウトした後にいちご狩りを楽しみ、そのまま熊本市街へ向かいます。",family:"出發前確認當季採果開放日、最後入園時間、是否需要預約與幼兒收費規則；溫室內可準備薄外套與濕紙巾。",family_ja:"出発前に、その季節のいちご狩りの営業日、最終受付時間、予約の要否、幼児の料金を確認します。ハウス内に備えて、薄手の上着とウェットティッシュを用意します。"},
   daikanbo:{scene:"aso",priority:"景觀線選項",priority_ja:"景観ルート限定",level:"flex",stay:"30–40 分鐘",stay_ja:"30〜40分",description:"大觀峰位於阿蘇北外輪山，可從不同角度眺望阿蘇五岳，是避免重複草千里的中繼站。",description_ja:"大観峰は阿蘇の北外輪山にあり、草千里ヶ浜とは違う角度から阿蘇五岳を望めます。草千里ヶ浜と景色が重ならないように選んだ、途中の立ち寄り先です。",family:"濃霧、強風或下雨時景觀價值大幅下降，可直接取消改回熊本。",family_ja:"濃霧・強風・雨の日は眺望がほとんど期待できないため、立ち寄らずにそのまま熊本へ向かいます。"},
   kumamoto:{scene:"kumamoto",priority:"住宿基地",priority_ja:"宿泊拠点",level:"core",stay:"依入住安排",stay_ja:"チェックインの時間に合わせて",description:"熊本市區最後一晚以停車、入住、晚餐與整理行李為主，景點安排依 Day 4 路線調整。",description_ja:"熊本市街での最後の夜は、駐車・チェックイン・夕食・荷物の整理が中心です。観光の予定は Day 4 のルートによって変わります。",family:"先確認飯店停車和入住時間，避免帶著孩子繞市區找車位。",family_ja:"ホテルの駐車場とチェックイン時間を事前に確認し、子ども連れで駐車場を探し回らないようにします。"},
   castle:{scene:"kumamoto",priority:"建議保留",priority_ja:"おすすめ",level:"flex",stay:"1.5–2 小時",stay_ja:"1.5〜2時間",description:"熊本城與城彩苑可把歷史景觀、地方小吃和伴手禮放在同一站完成。是否放 Day 4 或 Day 5 取決於回熊本的路線。",description_ja:"熊本城と桜の馬場 城彩苑では、歴史ある景観・ご当地グルメ・お土産を一か所で楽しめます。Day 4 と Day 5 のどちらで訪れるかは、熊本へ戻るルートによって決まります。",family:"園區有坡道與台階，揹帶通常比全程推車靈活；注意最晚入園時間。",family_ja:"園内は坂道や階段が多いため、ベビーカーより抱っこひもの方が動きやすいことが多いです。最終入園時間に注意します。"},
@@ -40,16 +44,17 @@ const PLACE_INFO={
   shopping:{scene:"kumamoto",priority:"彈性安排",priority_ja:"自由時間",level:"optional",stay:"60–120 分鐘",stay_ja:"60〜120分",description:"上通與下通是有遮蔽的市中心商店街，可集中處理晚餐、小吃和伴手禮。",description_ja:"上通・下通はアーケードのある中心街の商店街で、夕食・食べ歩き・お土産をまとめて済ませられます。",family:"把必買清單先寫好；返程日要倒推取車、加油和機場報到。",family_ja:"買う物のリストを事前に作っておきます。帰国日は、車を出す時間・給油・空港でのチェックインから逆算して動きます。"}
 };
 const ATTRACTION_PLACES=new Set(["shirakawa","kusasenri","crater","yufuin","safari","umi","takegawara","daikanbo","castle","suizenji","strawberry"]);
+const ILLUSTRATED_INFO_PLACES=new Set(["still_hotel","beppu_hotel","aso_onsen"]);
 const DAYS={
-  1:{title:"熊本機場周邊・抵達日",title_ja:"熊本空港周辺・到着日",subtitle:"18:15 抵達後不租車、不進市區。先吃飯，再到機場附近就寢。",subtitle_ja:"18:15 に到着後、レンタカーは借りず、市街にも行きません。食事をしてから空港近くのホテルで休みます。",insight:"第一晚飯店尚未確定。訂房時確認機場接駁或計程車車程、晚間入住、早餐與隔日返回租車營業所的方式。",insight_ja:"初日のホテルは未定です。予約時に、空港からの送迎またはタクシーの所要時間、夜間のチェックイン、朝食、翌朝レンタカー営業所へ戻る方法を確認します。",events:[
+  1:{title:"熊本機場周邊・抵達日",title_ja:"熊本空港周辺・到着日",subtitle:"18:15 抵達後不租車、不進市區。先吃飯，再入住 THE STILL HOTEL。",subtitle_ja:"18:15 に到着後、レンタカーは借りず、市街にも行きません。食事をしてから THE STILL HOTEL に宿泊します。",insight:"第一晚入住 THE STILL HOTEL。從機場搭空港 Liner 至肥後大津站後步行約 1 分鐘；先查當日晚間末班車，若錯過則改搭計程車。",insight_ja:"初日は THE STILL HOTEL に宿泊します。空港ライナーで肥後大津駅へ行き、駅から徒歩約1分です。当日の最終便を確認し、間に合わない場合はタクシーを利用します。",events:[
     {time:"15:00–18:15",title:"台中飛往熊本",title_ja:"台中 → 熊本（フライト）",detail:"航班時間依原行程；以實際機票為準。",detail_ja:"フライト時刻は元の旅程によるものです。実際の航空券の内容を優先してください。",place:"airport",tag:"航班",tag_ja:"フライト"},
     {time:"約 18:30–19:20",title:"入境、領行李",title_ja:"入国審査・手荷物の受け取り",detail:"抓約 50 分鐘緩衝；依排隊與行李提領順延。",detail_ja:"約50分の余裕を見ています。混雑や荷物の受け取りの状況に応じて後ろにずらします。",place:"airport"},
     {time:"約 19:20–20:05",title:"機場周邊晚餐",title_ja:"空港周辺で夕食",detail:"優先選抵達後可進入的航廈 1F 或そらよかダイニング；若延誤，改飯店附近或預備輕食。先查當日最後點餐時間。",detail_ja:"到着後でも入れるターミナル1階や「そらよかダイニング」を優先します。遅延した場合はホテル周辺のお店か、用意しておいた軽食にします。当日のラストオーダーを事前に確認します。",place:"airport",tag:"先用餐",tag_ja:"まず食事"},
-    {time:"約 20:15",title:"前往機場附近飯店",title_ja:"空港近くのホテルへ",detail:"搭飯店接駁或計程車；飯店名稱與確切交通方式待訂房後補上。",detail_ja:"ホテルの送迎かタクシーを利用します。ホテル名と具体的な交通手段は、予約後に追記します。",place:"airport",tag:"飯店待定",tag_ja:"ホテル未定"},
-    {time:"約 20:30",title:"入住與休息",title_ja:"チェックイン・休憩",detail:"第一晚住機場周邊，為隔天早上取車保留體力。",detail_ja:"初日は空港周辺に泊まり、翌朝のレンタカー受け取りに備えて体力を温存します。",place:"airport"}
+    {time:"約 20:15",title:"前往 THE STILL HOTEL",title_ja:"THE STILL HOTEL へ",detail:"搭空港 Liner 至肥後大津站後步行約 1 分鐘；先確認末班車，若已錯過則改搭計程車。",detail_ja:"空港ライナーで肥後大津駅へ行き、駅から徒歩約1分です。最終便を確認し、間に合わない場合はタクシーを利用します。",place:"still_hotel",tag:"Day 1 住宿",tag_ja:"Day 1 の宿泊"},
+    {time:"約 20:40",title:"THE STILL HOTEL 入住與休息",title_ja:"THE STILL HOTEL にチェックイン・休憩",detail:"完成入住後早點休息，為隔天早上返回機場取車保留體力。",detail_ja:"チェックイン後は早めに休み、翌朝空港へ戻ってレンタカーを受け取るために体力を温存します。",place:"still_hotel"}
   ]},
   2:{title:"機場周邊 → 白川水源 → 草千里 → 由布院 → 別府",title_ja:"空港周辺 → 白川水源 → 草千里ヶ浜 → 由布院 → 別府",subtitle:"南阿蘇水源先走，接草千里；午後往由布院的路段安排午睡。",subtitle_ja:"まず南阿蘇の白川水源、続いて草千里ヶ浜へ。午後の由布院への移動中に昼寝の時間をとります。",insight:"白川水源先於草千里，方向順。火山口目前受管制，不能列為固定景點；若出發時重新開放且時間充裕，才加看 30–45 分鐘，並縮短由布院停留。各段車程為規劃估值，出發前看導航。",insight_ja:"白川水源を先に回ると、草千里ヶ浜への道順がスムーズです。阿蘇中岳火口は現在規制中のため、確定の予定には入れていません。出発時に規制が解除され、時間に余裕がある場合のみ 30〜45分立ち寄り、その分由布院の滞在を短くします。各区間の所要時間は計画上の目安なので、出発前にナビで確認します。",events:[
-    {time:"07:45–08:15",title:"早餐、退房，返回機場租車點",title_ja:"朝食・チェックアウト、空港のレンタカー営業所へ",detail:"第一晚飯店待定；先預約隔天早上的接駁或計程車。",detail_ja:"初日のホテルは未定です。翌朝の送迎かタクシーを前日までに予約します。",place:"airport"},
+    {time:"07:45–08:15",title:"THE STILL HOTEL 早餐、退房",title_ja:"THE STILL HOTEL で朝食・チェックアウト",detail:"退房後搭空港 Liner 或計程車返回機場租車點；前一晚先確認班次與取車營業所位置。",detail_ja:"チェックアウト後、空港ライナーまたはタクシーで空港のレンタカー営業所へ戻ります。前夜に時刻と営業所の場所を確認します。",place:"still_hotel"},
     {time:"08:15–09:00",title:"取車與安裝兒童座椅",title_ja:"レンタカー受け取り・チャイルドシート装着",detail:"確認座椅、ETC、導航語言、還車地點與時段。依租車營業所實際開門時間預約。",detail_ja:"チャイルドシート、ETC、ナビの言語、返却場所と時間を確認します。予約は営業所の実際の営業開始時間に合わせます。",place:"airport",tag:"早上取車",tag_ja:"朝に受け取り"},
     {time:"09:00–09:50",title:"開往白川水源",title_ja:"白川水源へ",detail:"規劃抓約 45–60 分鐘；以實際道路與停車位置為準。",detail_ja:"約45〜60分を見込んでいます。実際の道路状況と駐車場所によって変わります。",place:"shirakawa"},
     {time:"09:50–10:25",title:"白川水源短走",title_ja:"白川水源を散策",detail:"約 30–35 分鐘，讓孩子活動、補水。",detail_ja:"約30〜35分。子どもが体を動かし、水分補給をする時間です。",place:"shirakawa"},
@@ -58,11 +63,11 @@ const DAYS={
     {time:"12:00–12:45",title:"阿蘇午餐",title_ja:"阿蘇で昼食",detail:"盡量在午睡前吃完。火山口若恢復開放，需挪用午餐或由布院的彈性時間。",detail_ja:"なるべく昼寝の前に食べ終えます。火口が開放された場合は、昼食か由布院の予備時間を使います。",place:"aso"},
     {time:"13:00–15:00",title:"前往由布院・車上午睡",title_ja:"由布院へ・車内で昼寝",detail:"規劃抓約 1 小時 45 分至 2 小時 15 分；含休息時可更久。",detail_ja:"約1時間45分〜2時間15分を見込んでいます。休憩を含めると、さらにかかることがあります。",place:"yufuin",tag:"午睡",tag_ja:"昼寝"},
     {time:"15:00–15:50",title:"金鱗湖、湯之坪街道",title_ja:"金鱗湖・湯の坪街道",detail:"湖畔和商店擇一段走；若火山口加進來或山路慢行，這段優先縮短。",detail_ja:"湖畔か商店街のどちらかを歩きます。火口に立ち寄った場合や山道に時間がかかった場合は、ここを優先的に短縮します。",place:"yufuin"},
-    {time:"15:50–17:00",title:"前往別府並入住",title_ja:"別府へ移動・チェックイン",detail:"由布院到別府市區抓約 45–60 分鐘，再預留停車、入住。",detail_ja:"由布院から別府市街まで約45〜60分。駐車とチェックインの時間も見込んでいます。",place:"beppu",tag:"別府第 1 晚",tag_ja:"別府 1泊目"},
-    {time:"17:30",title:"別府晚餐與休息",title_ja:"別府で夕食・休憩",detail:"冷麵、唐揚或豐後牛，依孩子狀態選近飯店的店。",detail_ja:"冷麺・唐揚げ・豊後牛など。子どもの様子を見て、ホテルに近いお店を選びます。",place:"beppu"}
+    {time:"15:50–17:00",title:"前往 Beppu Kanko Hotel Ace 並入住",title_ja:"別府観光ホテル エースへ・チェックイン",detail:"由布院到飯店抓約 45–60 分鐘，再預留停車與入住時間。",detail_ja:"由布院からホテルまで約45〜60分。駐車とチェックインの時間も見込みます。",place:"beppu_hotel",tag:"別府第 1 晚",tag_ja:"別府 1泊目"},
+    {time:"17:30",title:"別府晚餐與休息",title_ja:"別府で夕食・休憩",detail:"冷麵、唐揚或豐後牛，依孩子狀態選飯店周邊或方便停車的店。",detail_ja:"冷麺・唐揚げ・豊後牛など。子どもの様子を見て、ホテル周辺か駐車しやすいお店を選びます。",place:"beppu_hotel"}
   ]},
   3:{title:"九州自然動物園 → 海地獄 → 別府市區",title_ja:"九州自然動物公園 → 海地獄 → 別府市街",subtitle:"動物園是今日主角；午餐後去海地獄，傍晚留給別府散步與晚餐。",subtitle_ja:"今日の主役は動物公園です。昼食後に海地獄へ行き、夕方は別府の散策と夕食にあてます。",insight:"海地獄目前公告 08:00–17:00；排在午後仍要留意離園及車程。若動物園玩得久，海地獄以單點短逛，晚間逛街依孩子體力決定。",insight_ja:"海地獄の営業時間は現在 8:00〜17:00 と案内されています。午後の訪問でも、退園時間と移動時間に注意します。動物公園で長く過ごした場合は海地獄を短時間だけ見学し、夜の散策は子どもの体力次第で決めます。",events:[
-    {time:"07:50",title:"別府出發",title_ja:"別府を出発",detail:"山路、停車與入園排隊留緩衝。",detail_ja:"山道・駐車・入園の待ち時間に余裕を持たせます。",place:"beppu"},
+    {time:"07:50",title:"從 Beppu Kanko Hotel Ace 出發",title_ja:"別府観光ホテル エースを出発",detail:"山路、停車與入園排隊留緩衝。",detail_ja:"山道・駐車・入園の待ち時間に余裕を持たせます。",place:"beppu_hotel"},
     {time:"約 09:00–11:30",title:"九州自然動物園",title_ja:"九州自然動物公園アフリカンサファリ",detail:"自駕或叢林巴士，並視時間逛互動區；營業和巴士班次依當季公告。",detail_ja:"マイカーかジャングルバスでサファリを回り、時間があればふれあいエリアへ。営業時間とバスの運行は、その季節の公式案内に従います。",place:"safari",tag:"必去",tag_ja:"必ず行く",must:true},
     {time:"11:30–12:15",title:"園內午餐",title_ja:"園内で昼食",detail:"離園前補水、上廁所，準備下段車程。",detail_ja:"退園前に水分補給とトイレを済ませ、次の移動に備えます。",place:"safari"},
     {time:"12:15–13:05",title:"往海地獄・短車程午睡",title_ja:"海地獄へ・短い移動中に昼寝",detail:"車程先抓 35–50 分鐘；孩子若仍在睡，可稍候或縮短海地獄停留。",detail_ja:"移動は約35〜50分。子どもがまだ寝ていれば少し待つか、海地獄の滞在を短くします。",place:"umi",tag:"午睡機會",tag_ja:"昼寝のチャンス"},
@@ -73,7 +78,7 @@ const DAYS={
 };
 const DAY4={
   scenic:{title:"別府 → 大觀峰 → 熊本｜景觀線",title_ja:"別府 → 大観峰 → 熊本｜景観ルート",subtitle:"早退房，走山線到大觀峰短停；下午回熊本逛商店街。",subtitle_ja:"早めにチェックアウトし、山のルートで大観峰に短く立ち寄ります。午後は熊本に戻って商店街を散策します。",insight:"大觀峰與草千里是不同觀景點，但這條山線仍較長、受天候影響。規劃行車合計約 3.5–4.5 小時，再加觀景、午餐；熊本城留到 Day 5。",insight_ja:"大観峰と草千里ヶ浜は別の展望スポットですが、この山のルートは距離が長く、天候の影響も受けます。運転時間は合計約3.5〜4.5時間で、これに見学と昼食の時間が加わります。熊本城は Day 5 に回します。",events:[
-    {time:"08:30",title:"別府退房出發",title_ja:"別府でチェックアウト・出発",detail:"往阿蘇北外輪山。山路時間依當天導航調整。",detail_ja:"阿蘇の北外輪山へ向かいます。山道の所要時間は当日のナビで調整します。",place:"beppu"},
+    {time:"08:30",title:"Beppu Kanko Hotel Ace 退房出發",title_ja:"別府観光ホテル エースをチェックアウト・出発",detail:"往阿蘇北外輪山。山路時間依當天導航調整。",detail_ja:"阿蘇の北外輪山へ向かいます。山道の所要時間は当日のナビで調整します。",place:"beppu_hotel"},
     {time:"約 10:45–11:20",title:"大觀峰短停",title_ja:"大観峰に立ち寄り",detail:"看阿蘇全景、伸展約 30–35 分鐘；遇濃霧或大風可取消。",detail_ja:"阿蘇の全景を眺め、30〜35分ほど体を伸ばします。濃霧や強風のときは取りやめます。",place:"daikanbo",tag:"中繼站",tag_ja:"途中の立ち寄り"},
     {time:"11:30–12:15",title:"附近午餐",title_ja:"周辺で昼食",detail:"選方便停車的阿蘇店家，先餵飽孩子。",detail_ja:"駐車しやすい阿蘇のお店を選び、まず子どもに食べさせます。",place:"aso"},
     {time:"12:15–14:15",title:"前往熊本・車上午睡",title_ja:"熊本へ・車内で昼寝",detail:"抓約 1.5–2 小時，依道路、休息和市區交通調整。",detail_ja:"約1.5〜2時間。道路状況・休憩・市街の交通に応じて調整します。",place:"kumamoto",tag:"午睡",tag_ja:"昼寝"},
@@ -81,15 +86,15 @@ const DAY4={
     {time:"16:00–18:30",title:"上通、下通與晚餐",title_ja:"上通・下通と夕食",detail:"下午逛商店街、吃熊本料理。熊本城留 Day 5。",detail_ja:"午後は商店街を散策し、熊本料理を味わいます。熊本城は Day 5 に回します。",place:"shopping"}
   ]},
   highway:{title:"別府 → 熊本｜高速線",title_ja:"別府 → 熊本｜高速ルート",subtitle:"直接走高速公路回熊本，把多出的時間留給熊本城。",subtitle_ja:"高速道路でまっすぐ熊本へ戻り、浮いた時間を熊本城にあてます。",insight:"NEXCO 的別府 IC→熊本 IC 查詢約 2 小時 8 分；加上旅館到交流道、熊本市區和休息，門到門先抓約 2 小時 45 分至 3 小時 15 分。相較景觀線通常可省約 1–2 小時的總行程時間，仍以當日導航為準。",insight_ja:"NEXCO で別府IC→熊本IC を調べると約2時間8分です。宿からICまでの移動、熊本市街の移動、休憩を加えると、ドア・ツー・ドアで約2時間45分〜3時間15分を見込みます。景観ルートより全体で1〜2時間ほど短縮できることが多いですが、当日のナビを優先します。",events:[
-    {time:"08:30",title:"別府退房出發",title_ja:"別府でチェックアウト・出発",detail:"高速公路直回熊本，途中視孩子狀況在休息區停車。",detail_ja:"高速道路で熊本へ直行し、子どもの様子を見てサービスエリアで休憩します。",place:"beppu"},
+    {time:"08:30",title:"Beppu Kanko Hotel Ace 退房出發",title_ja:"別府観光ホテル エースをチェックアウト・出発",detail:"高速公路直回熊本，途中視孩子狀況在休息區停車。",detail_ja:"高速道路で熊本へ直行し、子どもの様子を見てサービスエリアで休憩します。",place:"beppu_hotel"},
     {time:"約 11:15–12:15",title:"熊本市區午餐",title_ja:"熊本市街で昼食",detail:"抵達時間受交流道、塞車與停車影響。",detail_ja:"到着時間は、ICの出入り・渋滞・駐車の状況によって変わります。",place:"kumamoto"},
     {time:"12:15–13:30",title:"午睡或安靜休息",title_ja:"昼寝、または静かに休憩",detail:"可在車上接午睡，成人留在車旁照看；若飯店可提早入住則回房休息。",detail_ja:"車内で昼寝を続け、大人が車のそばで見守ります。ホテルに早めにチェックインできれば、部屋で休みます。",place:"kumamoto",tag:"午睡",tag_ja:"昼寝"},
     {time:"14:00–16:00",title:"熊本城與城彩苑",title_ja:"熊本城と城彩苑",detail:"官方一般季節最晚 16:00 入園；若午睡延長就改先逛城彩苑，熊本城移回 Day 5。",detail_ja:"通常期の最終入園は 16:00 です。昼寝が長引いた場合は先に城彩苑を回り、熊本城は Day 5 に移します。",place:"castle"},
     {time:"16:15",title:"熊本飯店入住",title_ja:"熊本のホテルにチェックイン",detail:"放行李、停車。",detail_ja:"荷物を置いて、駐車します。",place:"kumamoto",tag:"熊本第 2 晚",tag_ja:"熊本県内 2泊目"},
     {time:"17:30",title:"熊本晚餐",title_ja:"熊本で夕食",detail:"下通周邊找家適合孩子的餐廳。",detail_ja:"下通周辺で、子ども連れに向いたお店を探します。",place:"shopping"}
   ]},
-  aso:{title:"阿蘇溫泉 → 採草莓 → 熊本｜C 路線",title_ja:"阿蘇の温泉 → いちご狩り → 熊本｜C ルート",subtitle:"早上在阿蘇健康農園採草莓，下午進熊本城與城彩苑。",subtitle_ja:"朝は阿蘇健康農園でいちご狩り、午後は熊本城と城彩苑へ。",insight:"此版本承接 Day 3 住阿蘇溫泉飯店。採果出發前務必確認當季營業、入園與預約規則；中午以簡單用餐和車上午睡銜接，讓下午仍能保留熊本城時間。",insight_ja:"このプランは、Day 3 に阿蘇の温泉ホテルに泊まる場合の続きです。いちご狩りに出かける前に、その季節の営業状況・入園・予約のルールを必ず確認してください。昼は手早く食事を済ませて車内での昼寝につなげ、午後に熊本城を見学する時間を確保します。",events:[
-    {time:"09:00",title:"阿蘇溫泉飯店退房",title_ja:"阿蘇の温泉ホテルをチェックアウト",detail:"早餐後出發；以飯店實際位置與阿蘇健康農園當日導航為準。",detail_ja:"朝食後に出発します。ホテルの実際の場所と、阿蘇健康農園までの当日のナビを優先します。",place:"aso_onsen"},
+  aso:{title:"民宿あそげん → 採草莓 → 熊本｜C 路線",title_ja:"民宿あそげん → いちご狩り → 熊本｜C ルート",subtitle:"從民宿あそげん退房後採草莓，下午進熊本城與城彩苑。",subtitle_ja:"民宿あそげんをチェックアウトしていちご狩りへ。午後は熊本城と城彩苑へ。",insight:"此版本承接 Day 3 入住民宿あそげん。採果出發前務必確認當季營業、入園與預約規則；中午以簡單用餐和車上午睡銜接，讓下午仍能保留熊本城時間。",insight_ja:"このプランは、Day 3 に民宿あそげんに泊まる場合の続きです。いちご狩りに出かける前に、その季節の営業状況・入園・予約のルールを必ず確認してください。昼は手早く食事を済ませて車内での昼寝につなげ、午後に熊本城を見学する時間を確保します。",events:[
+    {time:"09:00",title:"民宿あそげん退房",title_ja:"民宿あそげんをチェックアウト",detail:"早餐後出發；以民宿實際位置與阿蘇健康農園當日導航為準。",detail_ja:"朝食後に出発します。民宿の場所と、阿蘇健康農園までの当日のナビを優先します。",place:"aso_onsen"},
     {time:"09:30–10:40",title:"阿蘇健康農園採草莓",title_ja:"阿蘇健康農園でいちご狩り",detail:"預留約 60 分鐘採果；先確認採果季、開放日、最後入園時間及是否需預約。",detail_ja:"いちご狩りは約60分を見込みます。シーズン・営業日・最終受付時間・予約の要否を事前に確認します。",place:"strawberry",tag:"C 路線重點",tag_ja:"C ルートの見どころ"},
     {time:"10:40–12:10",title:"前往熊本市區",title_ja:"熊本市街へ",detail:"由阿蘇往熊本抓約 1 小時 20 分至 1 小時 40 分；依道路、休息與孩子狀況調整。",detail_ja:"阿蘇から熊本まで約1時間20分〜1時間40分を見込みます。道路状況・休憩・子どもの様子に応じて調整します。",place:"kumamoto",tag:"長車程",tag_ja:"長めの移動"},
     {time:"12:15–13:00",title:"熊本市區午餐",title_ja:"熊本市街で昼食",detail:"優先選停車方便、能快速出餐的店，讓午後行程準時接上。",detail_ja:"駐車しやすく料理がすぐに出るお店を優先し、午後の予定に遅れないようにします。",place:"kumamoto"},
@@ -125,9 +130,9 @@ const RETURN_EVENTS=[
   {time:"19:15–20:45",title:"飛返台灣",title_ja:"台湾へ帰国（フライト）",detail:"原行程航班時間；以實際訂票紀錄為準。",detail_ja:"元の旅程のフライト時刻です。実際の予約記録を優先してください。",place:"airport",tag:"航班",tag_ja:"フライト"}
 ];
 const overviewItems=()=>[
-  {title:"機場周邊過夜",title_ja:"空港周辺に宿泊",desc:"18:15 抵達，吃飯後入住；飯店待定。",desc_ja:"18:15 に到着し、食事をしてからチェックイン。ホテルは未定です。"},
+  {title:"THE STILL HOTEL 過夜",title_ja:"THE STILL HOTEL に宿泊",desc:"18:15 抵達，吃飯後搭空港 Liner 前往肥後大津站。",desc_ja:"18:15 に到着し、食事の後に空港ライナーで肥後大津駅へ向かいます。"},
   {title:"白川水源・草千里・由布院",title_ja:"白川水源・草千里ヶ浜・由布院",desc:"早上取車，午睡車程後進別府。",desc_ja:"朝にレンタカーを受け取り、昼寝をしながら移動して別府へ。"},
-  activeDay3==="aso"?{title:"自然動物園・海地獄・阿蘇溫泉",title_ja:"動物公園・海地獄・阿蘇の温泉",desc:"海地獄短逛後，下午前往阿蘇溫泉飯店。",desc_ja:"海地獄を短時間見学した後、午後は阿蘇の温泉ホテルへ。"}:{title:"自然動物園・海地獄",title_ja:"動物公園・海地獄",desc:"上午看動物，午後看海地獄、逛別府。",desc_ja:"午前は動物公園、午後は海地獄と別府の散策。"},
+  activeDay3==="aso"?{title:"自然動物園・海地獄・民宿あそげん",title_ja:"動物公園・海地獄・民宿あそげん",desc:"海地獄短逛後，下午前往民宿あそげん。",desc_ja:"海地獄を短時間見学した後、午後は民宿あそげんへ。"}:{title:"自然動物園・海地獄",title_ja:"動物公園・海地獄",desc:"上午看動物，午後看海地獄、逛別府。",desc_ja:"午前は動物公園、午後は海地獄と別府の散策。"},
   activeDay4==="aso"?{title:"採草莓後回熊本",title_ja:"いちご狩りの後、熊本へ",desc:"C 路線上午採果，下午熊本城與城彩苑。",desc_ja:"C ルートは午前にいちご狩り、午後に熊本城と城彩苑。"}:{title:"大觀峰或高速返熊本",title_ja:"大観峰経由、または高速で熊本へ",desc:"兩條路線可切換；市區時間不同。",desc_ja:"2つのルートを切り替えられます。市街で過ごせる時間が変わります。"},
   activeDay5==="aso"?{title:"水前寺・街區美食・返程",title_ja:"水前寺・街歩きグルメ・帰路",desc:"C 路線改用庭園散步與市區收尾。",desc_ja:"C ルートは庭園の散策と市街めぐりで締めくくり。"}:{title:"熊本市區與返程",title_ja:"熊本市街・帰路",desc:"依 Day 4 是否逛城，換不同景點。",desc_ja:"Day 4 に熊本城へ行ったかどうかで、見学先が変わります。"}
 ];
@@ -142,20 +147,20 @@ const loc=(obj,key)=>isJa()&&obj&&obj[`${key}_ja`]!==undefined?obj[`${key}_ja`]:
 const placeName=id=>isJa()?(JA_PLACE_NAMES[id]||PLACES[id].name):PLACES[id].name;
 const localizedEvent=event=>!isJa()?event:{...event,sourceTitle:event.title,time:loc(event,"time"),title:loc(event,"title"),detail:loc(event,"detail"),tag:loc(event,"tag")};
 const localizedDay=data=>!isJa()?data:{...data,title:loc(data,"title"),subtitle:loc(data,"subtitle"),insight:loc(data,"insight"),events:data.events.map(localizedEvent)};
-const DAY3={beppu:DAYS[3],aso:{title:"九州自然動物園 → 海地獄 → 阿蘇溫泉飯店｜C 路線",title_ja:"九州自然動物公園 → 海地獄 → 阿蘇の温泉ホテル｜C ルート",subtitle:"動物園後先看海地獄，再入住阿蘇溫泉飯店；取消別府市區晚餐與逛街。",subtitle_ja:"動物公園の後に海地獄を見学し、阿蘇の温泉ホテルに泊まります。別府市街での夕食と散策はなくなります。",insight:"這條線承接後續 Day 4、Day 5 的 C 路線。海地獄維持為單點短逛，離園後直接往阿蘇；飯店先以阿蘇／內牧溫泉區估算，若改訂黑川等較遠區域，需重新看下午車程。",insight_ja:"このルートは、続く Day 4・Day 5 の C ルートにつながります。海地獄は短時間の見学にとどめ、退園後はそのまま阿蘇へ向かいます。ホテルはひとまず阿蘇・内牧温泉エリアとして計算しています。黒川など遠いエリアを予約する場合は、午後の移動時間を見直します。",events:[
-  {time:"07:50",title:"別府出發",title_ja:"別府を出発",detail:"山路、停車與入園排隊留緩衝。",detail_ja:"山道・駐車・入園の待ち時間に余裕を持たせます。",place:"beppu"},
+const DAY3={beppu:DAYS[3],aso:{title:"九州自然動物園 → 海地獄 → 民宿あそげん｜C 路線",title_ja:"九州自然動物公園 → 海地獄 → 民宿あそげん｜C ルート",subtitle:"動物園後先看海地獄，再入住民宿あそげん；取消別府市區晚餐與逛街。",subtitle_ja:"動物公園の後に海地獄を見学し、民宿あそげんに泊まります。別府市街での夕食と散策はなくなります。",insight:"這條線承接後續 Day 4、Day 5 的 C 路線。海地獄維持為單點短逛，離園後直接前往阿蘇市乙姬的民宿あそげん；官方入住時間為 16:00 起，抵達時間與晚餐方案需依預訂內容確認。",insight_ja:"このルートは、続く Day 4・Day 5 の C ルートにつながります。海地獄は短時間の見学にとどめ、退園後は阿蘇市乙姫の民宿あそげんへ向かいます。チェックインは16:00からです。到着時間と夕食プランは予約内容に合わせて確認します。",events:[
+  {time:"07:50",title:"從 Beppu Kanko Hotel Ace 出發",title_ja:"別府観光ホテル エースを出発",detail:"山路、停車與入園排隊留緩衝。",detail_ja:"山道・駐車・入園の待ち時間に余裕を持たせます。",place:"beppu_hotel"},
   {time:"約 09:00–11:30",title:"九州自然動物園",title_ja:"九州自然動物公園アフリカンサファリ",detail:"自駕或叢林巴士，並視時間逛互動區；營業和巴士班次依當季公告。",detail_ja:"マイカーかジャングルバスでサファリを回り、時間があればふれあいエリアへ。営業時間とバスの運行は、その季節の公式案内に従います。",place:"safari",tag:"必去",tag_ja:"必ず行く",must:true},
   {time:"11:30–12:15",title:"園內午餐",title_ja:"園内で昼食",detail:"離園前補水、上廁所，準備海地獄與下午往阿蘇的車程。",detail_ja:"退園前に水分補給とトイレを済ませ、海地獄と午後の阿蘇への移動に備えます。",place:"safari"},
   {time:"12:15–13:05",title:"往海地獄・短車程午睡",title_ja:"海地獄へ・短い移動中に昼寝",detail:"車程先抓 35–50 分鐘；孩子若仍在睡，可縮短海地獄停留。",detail_ja:"移動は約35〜50分。子どもがまだ寝ていれば、海地獄の滞在を短くします。",place:"umi",tag:"午睡機會",tag_ja:"昼寝のチャンス"},
   {time:"13:15–14:00",title:"海地獄短逛",title_ja:"海地獄を短時間見学",detail:"保留海地獄單點，不排七地獄巡禮；為阿蘇飯店入住時間留緩衝。",detail_ja:"海地獄だけを見学し、地獄めぐりはしません。阿蘇のホテルのチェックインに間に合うよう、余裕を持たせます。",place:"umi"},
-  {time:"14:00–16:15",title:"前往阿蘇溫泉飯店・車上午睡",title_ja:"阿蘇の温泉ホテルへ・車内で昼寝",detail:"先抓約 2 小時至 2 小時 30 分；實際依飯店位置、山路與休息調整。",detail_ja:"約2時間〜2時間30分を見込んでいます。ホテルの場所・山道・休憩によって変わります。",place:"aso_onsen",tag:"午睡",tag_ja:"昼寝"},
-  {time:"16:30",title:"阿蘇溫泉飯店入住",title_ja:"阿蘇の温泉ホテルにチェックイン",detail:"飯店待定；先以阿蘇／內牧溫泉區為導航參考。",detail_ja:"ホテルは未定です。ひとまず阿蘇・内牧温泉エリアをナビの目安にしています。",place:"aso_onsen",tag:"C 路線住宿",tag_ja:"C ルートの宿泊"},
-  {time:"傍晚",time_ja:"夕方",title:"飯店溫泉、館內晚餐與休息",title_ja:"ホテルの温泉・館内で夕食・休憩",detail:"不再趕海地獄與別府市區，將晚上留給孩子與泡湯節奏。",detail_ja:"海地獄や別府市街へ急ぐことはせず、夜は子どもと温泉でゆっくり過ごします。",place:"aso_onsen"}
+  {time:"14:00–16:15",title:"前往民宿あそげん・車上午睡",title_ja:"民宿あそげんへ・車内で昼寝",detail:"先抓約 2 小時至 2 小時 30 分；實際依山路、休息與當日導航調整。",detail_ja:"約2時間〜2時間30分を見込んでいます。山道・休憩・当日のナビに合わせて調整します。",place:"aso_onsen",tag:"午睡",tag_ja:"昼寝"},
+  {time:"16:30",title:"民宿あそげん入住",title_ja:"民宿あそげんにチェックイン",detail:"官方入住時間為 16:00 起；地址為阿蘇市乙姬 1506。",detail_ja:"チェックインは16:00から。住所は阿蘇市乙姫1506です。",place:"aso_onsen",tag:"C 路線住宿",tag_ja:"C ルートの宿泊"},
+  {time:"傍晚",time_ja:"夕方",title:"民宿晚餐、浴池與休息",title_ja:"民宿で夕食・入浴・休憩",detail:"依預訂方案享用阿蘇鄉土料理；不再安排別府市區行程，晚上留給孩子休息。",detail_ja:"予約プランに合わせて阿蘇の郷土料理を楽しみます。別府市街の予定は入れず、夜は子どもとゆっくり休みます。",place:"aso_onsen"}
 ]}};
 const baseDayData=day=>day===3?DAY3[activeDay3]:day===4?DAY4[activeDay4]:day===5?{...DAY5[activeDay5],events:[...DAY5[activeDay5].events,...RETURN_EVENTS]}:DAYS[day];
 const dayData=day=>localizedDay(baseDayData(day));
 const uniquePlaces=events=>[...new Set(events.map(e=>e.place).filter(Boolean))];
-const currentPlaces=()=>activeDay===0?["airport","shirakawa","kusasenri","aso","yufuin","beppu","safari",...(activeDay3==="aso"?["umi","aso_onsen"]:["umi","beppu"]),...uniquePlaces(dayData(4).events),...uniquePlaces(dayData(5).events)]:uniquePlaces(dayData(activeDay).events);
+const currentPlaces=()=>activeDay===0?["airport","still_hotel","shirakawa","kusasenri","aso","yufuin","beppu_hotel","beppu","safari",...(activeDay3==="aso"?["umi","aso_onsen"]:["umi"]),...uniquePlaces(dayData(4).events),...uniquePlaces(dayData(5).events)]:uniquePlaces(dayData(activeDay).events);
 const placeURL=id=>`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(PLACES[id].query)}`;
 const isAttractionPlace=id=>ATTRACTION_PLACES.has(id);
 const isAttractionEvent=event=>{
@@ -188,8 +193,8 @@ const priorityBadge=event=>{
 };
 function overviewChoice(){
   const ja=isJa();
-  const day3Summary=activeDay3==="aso"?(ja?"C 海地獄・阿蘇の温泉ホテル":"C 海地獄・阿蘇溫泉飯店"):(ja?"A 別府に連泊":"A 別府連住");
-  const day3Labels=ja?{beppu:"A 別府に連泊",aso:"C 海地獄・阿蘇の温泉"}:{beppu:"A 別府連住",aso:"C 海地獄・阿蘇溫泉"};
+  const day3Summary=activeDay3==="aso"?"C 海地獄・民宿あそげん":(ja?"A 別府に連泊":"A 別府連住");
+  const day3Labels=ja?{beppu:"A 別府に連泊",aso:"C 海地獄・民宿あそげん"}:{beppu:"A 別府連住",aso:"C 海地獄・民宿あそげん"};
   const day4Labels=ja?{scenic:"A 景観ルート・大観峰",highway:"B 高速ルート・熊本城",aso:"C いちご狩り・熊本城"}:{scenic:"A 景觀線・大觀峰",highway:"B 高速線・熊本城",aso:"C 採草莓・熊本城"};
   const day4Summary=activeDay4==="aso"?(ja?"C いちご狩り → 熊本城":"C 採草莓 → 熊本城"):day4Labels[activeDay4];
   const day5Labels=ja?{scenic:"A 熊本城・城彩苑",highway:"B 水前寺・街歩き",aso:"C 水前寺・街歩き"}:{scenic:"A 熊本城・城彩苑",highway:"B 水前寺・街區",aso:"C 水前寺・街區"};
@@ -211,7 +216,7 @@ function renderOption(){
   const day5Wrap=$("day5OptionWrap");day5Wrap.hidden=activeDay!==5;
   day5Wrap.querySelectorAll("[data-day5-option]").forEach(b=>{const selected=b.dataset.day5Option===activeDay5;b.classList.toggle("is-active",selected);b.setAttribute("aria-pressed",String(selected));});
   const ja=isJa();
-  $("day5LinkNote").textContent=activeDay3==="aso"?(ja?"Day 3 で阿蘇の温泉ホテルを選んだ場合、Day 4・Day 5 は C ルートに固定されます。A／B を選ぶと別府連泊に戻ります。":"Day 3 選住阿蘇溫泉飯店時，Day 4、Day 5 都固定使用 C 路線；改選 A／B 會回到別府連住。"):activeDay4===activeDay5?(ja?"Day 4 のルートに合わせたおすすめプランです。自由に切り替えることもできます。":"這是依 Day 4 路線帶入的建議版本；也可自行切換。"):(ja?"Day 5 のプランを個別に変更しました。前日に実際に回った場所に合わせて選んでください。":"已自行改選 Day 5 版本；請依前一天實際去過的景點決定。");
+  $("day5LinkNote").textContent=activeDay3==="aso"?(ja?"Day 3 で民宿あそげんを選んだ場合、Day 4・Day 5 は C ルートに固定されます。A／B を選ぶと別府連泊に戻ります。":"Day 3 選住民宿あそげん時，Day 4、Day 5 都固定使用 C 路線；改選 A／B 會回到別府連住。"):activeDay4===activeDay5?(ja?"Day 4 のルートに合わせたおすすめプランです。自由に切り替えることもできます。":"這是依 Day 4 路線帶入的建議版本；也可自行切換。"):(ja?"Day 5 のプランを個別に変更しました。前日に実際に回った場所に合わせて選んでください。":"已自行改選 Day 5 版本；請依前一天實際去過的景點決定。");
 }
 function renderTimeline(){
   renderOption();
@@ -224,7 +229,7 @@ function renderTimeline(){
     $("timeline").querySelectorAll("[data-overview-day3-option]").forEach(b=>b.addEventListener("click",()=>setDay3Option(b.dataset.overviewDay3Option)));
     $("timeline").querySelectorAll("[data-overview-day4-option]").forEach(b=>b.addEventListener("click",()=>setDay4Option(b.dataset.overviewDay4Option)));
     $("timeline").querySelectorAll("[data-overview-day5-option]").forEach(b=>b.addEventListener("click",()=>setDay5Option(b.dataset.overviewDay5Option)));
-    $("insightCard").innerHTML=isJa()?`<strong>この旅のペース</strong><p>Day 1 は空港周辺に泊まり、Day 2 の朝にレンタカーを受け取ります。${activeDay3==="aso"?"Day 3 は動物公園の後に海地獄へ寄り、阿蘇の温泉ホテルに泊まります。Day 4 と Day 5 は C ルートに連動します。":"Day 3 は別府に連泊するのが基本です。Day 4 は景観ルートと高速ルートを切り替えられ、Day 5 の熊本での見学先も連動して変わります。"}</p>`:`<strong>這趟行程的節奏</strong><p>Day 1 機場周邊過夜、Day 2 早上取車。${activeDay3==="aso"?"Day 3 動物園後保留海地獄，接著改住阿蘇溫泉飯店；Day 4、Day 5 已連動為 C 路線。":"Day 3 原則上連住別府；Day 4 可切換景觀線或高速線，Day 5 會隨之更換熊本景點。"}</p>`;
+    $("insightCard").innerHTML=isJa()?`<strong>この旅のペース</strong><p>Day 1 は空港周辺に泊まり、Day 2 の朝にレンタカーを受け取ります。${activeDay3==="aso"?"Day 3 は動物公園の後に海地獄へ寄り、民宿あそげんに泊まります。Day 4 と Day 5 は C ルートに連動します。":"Day 3 は別府に連泊するのが基本です。Day 4 は景観ルートと高速ルートを切り替えられ、Day 5 の熊本での見学先も連動して変わります。"}</p>`:`<strong>這趟行程的節奏</strong><p>Day 1 機場周邊過夜、Day 2 早上取車。${activeDay3==="aso"?"Day 3 動物園後保留海地獄，接著入住民宿あそげん；Day 4、Day 5 已連動為 C 路線。":"Day 3 原則上連住別府；Day 4 可切換景觀線或高速線，Day 5 會隨之更換熊本景點。"}</p>`;
     return;
   }
   const data=dayData(activeDay);$("dayKicker").textContent=`DAY ${String(activeDay).padStart(2,"0")}`;$("dayTitle").textContent=data.title;$("daySubtitle").textContent=data.subtitle;$("dayNumber").textContent=String(activeDay).padStart(2,"0");
@@ -258,18 +263,20 @@ function openPlaceInfo(id,eventIndex){
   const place=PLACES[id],info=PLACE_INFO[id];if(!place||!info)return;
   const event=Number.isInteger(eventIndex)&&activeDay>0?dayData(activeDay).events[eventIndex]:null;
   const attraction=event?isAttractionEvent(event):isAttractionPlace(id);
+  const lodging=ILLUSTRATED_INFO_PLACES.has(id);
+  const illustrated=attraction||lodging;
   highlightPlace(id,false);
   const dialog=$("placeDialog"),art=$("placeDialogArt"),priority=$("placeDialogPriority");
-  dialog.className=`place-dialog${attraction?"":" text-only"}`;
-  art.hidden=!attraction;art.className=`place-art scene-${info.scene}`;art.dataset.place=id;
-  art.setAttribute("aria-label",attraction?`${placeName(id)}${isJa()?"の水彩イラスト":"水彩旅行插圖"}`:"");
+  dialog.className=`place-dialog${illustrated?"":" text-only"}`;
+  art.hidden=!illustrated;art.className=`place-art scene-${info.scene}`;art.dataset.place=id;
+  art.setAttribute("aria-label",illustrated?`${placeName(id)}${isJa()?"の水彩イラスト":"水彩旅行插圖"}`:"");
   $("placeDialogArea").textContent=attraction?`${isJa()?placeName(id):place.area}・${isJa()?"スポット案内":"景點簡介"}`:(activeDay?`DAY ${activeDay}・${isJa()?"予定の説明":"行程說明"}`:(isJa()?"予定の説明":"行程說明"));
-  $("placeDialogTitle").textContent=attraction?placeName(id):(event?.title||placeName(id));
-  $("placeDialogDescription").textContent=attraction?loc(info,"description"):(event?.detail||loc(info,"description"));
-  $("placeDialogTimeLabel").textContent=attraction?(isJa()?"目安の滞在時間":"建議停留"):(isJa()?"予定時間":"安排時間");
-  $("placeDialogTipLabel").textContent=attraction?(isJa()?"子連れメモ":"親子提示"):(isJa()?"旅程メモ":"行程提示");
-  $("placeDialogStay").textContent=attraction?loc(info,"stay"):(event?.time||loc(info,"stay"));
-  $("placeDialogFamily").textContent=attraction?loc(info,"family"):(driveBuffer(event||{})||loc(info,"family"));
+  $("placeDialogTitle").textContent=illustrated?placeName(id):(event?.title||placeName(id));
+  $("placeDialogDescription").textContent=illustrated?loc(info,"description"):(event?.detail||loc(info,"description"));
+  $("placeDialogTimeLabel").textContent=attraction?(isJa()?"目安の滞在時間":"建議停留"):lodging?(isJa()?"宿泊予定":"住宿安排"):(isJa()?"予定時間":"安排時間");
+  $("placeDialogTipLabel").textContent=attraction?(isJa()?"子連れメモ":"親子提示"):lodging?(isJa()?"子連れ宿泊メモ":"親子住宿提醒"):(isJa()?"旅程メモ":"行程提示");
+  $("placeDialogStay").textContent=illustrated?loc(info,"stay"):(event?.time||loc(info,"stay"));
+  $("placeDialogFamily").textContent=illustrated?loc(info,"family"):(driveBuffer(event||{})||loc(info,"family"));
   priority.hidden=!attraction;priority.textContent=loc(info,"priority");priority.className=`priority-pill ${info.level}`;
   $("placeDialogNavigate").href=placeURL(id);$("placeDialogLocate").dataset.locate=id;
   if(typeof dialog.showModal==="function")dialog.showModal();else dialog.setAttribute("open","");
