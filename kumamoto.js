@@ -51,7 +51,7 @@ const DAYS={
     {time:"約 18:30–19:20",title:"入境、領行李",title_ja:"入国審査・手荷物の受け取り",detail:"抓約 50 分鐘緩衝；依排隊與行李提領順延。",detail_ja:"約50分の余裕を見ています。混雑や荷物の受け取りの状況に応じて後ろにずらします。",place:"airport"},
     {time:"約 19:20–20:05",title:"機場周邊晚餐",title_ja:"空港周辺で夕食",detail:"優先選抵達後可進入的航廈 1F 或そらよかダイニング；若延誤，改飯店附近或預備輕食。先查當日最後點餐時間。",detail_ja:"到着後でも入れるターミナル1階や「そらよかダイニング」を優先します。遅延した場合はホテル周辺のお店か、用意しておいた軽食にします。当日のラストオーダーを事前に確認します。",place:"airport",tag:"先用餐",tag_ja:"まず食事"},
     {time:"約 20:15",title:"前往 THE STILL HOTEL",title_ja:"THE STILL HOTEL へ",detail:"搭空港 Liner 至肥後大津站後步行約 1 分鐘；先確認末班車，若已錯過則改搭計程車。",detail_ja:"空港ライナーで肥後大津駅へ行き、駅から徒歩約1分です。最終便を確認し、間に合わない場合はタクシーを利用します。",place:"still_hotel",tag:"Day 1 住宿",tag_ja:"Day 1 の宿泊"},
-    {time:"約 20:40",title:"THE STILL HOTEL 入住與休息",title_ja:"THE STILL HOTEL にチェックイン・休憩",detail:"完成入住後早點休息，為隔天早上返回機場取車保留體力。",detail_ja:"チェックイン後は早めに休み、翌朝空港へ戻ってレンタカーを受け取るために体力を温存します。",place:"still_hotel"}
+    {time:"約 20:40",title:"THE STILL HOTEL 入住與休息",title_ja:"THE STILL HOTEL にチェックイン・休憩",detail:"完成入住後早點休息，為隔天早上返回機場取車保留體力。",detail_ja:"チェックイン後は早めに休み、翌朝空港へ戻ってレンタカーを受け取るために体力を温存します。",place:"still_hotel",illustrated:true}
   ]},
   2:{title:"機場周邊 → 白川水源 → 草千里 → 由布院 → 別府",title_ja:"空港周辺 → 白川水源 → 草千里ヶ浜 → 由布院 → 別府",subtitle:"南阿蘇水源先走，接草千里；午後往由布院的路段安排午睡。",subtitle_ja:"まず南阿蘇の白川水源、続いて草千里ヶ浜へ。午後の由布院への移動中に昼寝の時間をとります。",insight:"白川水源先於草千里，方向順。火山口目前受管制，不能列為固定景點；若出發時重新開放且時間充裕，才加看 30–45 分鐘，並縮短由布院停留。各段車程為規劃估值，出發前看導航。",insight_ja:"白川水源を先に回ると、草千里ヶ浜への道順がスムーズです。阿蘇中岳火口は現在規制中のため、確定の予定には入れていません。出発時に規制が解除され、時間に余裕がある場合のみ 30〜45分立ち寄り、その分由布院の滞在を短くします。各区間の所要時間は計画上の目安なので、出発前にナビで確認します。",events:[
     {time:"07:45–08:15",title:"THE STILL HOTEL 早餐、退房",title_ja:"THE STILL HOTEL で朝食・チェックアウト",detail:"退房後搭空港 Liner 或計程車返回機場租車點；前一晚先確認班次與取車營業所位置。",detail_ja:"チェックアウト後、空港ライナーまたはタクシーで空港のレンタカー営業所へ戻ります。前夜に時刻と営業所の場所を確認します。",place:"still_hotel"},
@@ -63,7 +63,7 @@ const DAYS={
     {time:"12:00–12:45",title:"阿蘇午餐",title_ja:"阿蘇で昼食",detail:"盡量在午睡前吃完。火山口若恢復開放，需挪用午餐或由布院的彈性時間。",detail_ja:"なるべく昼寝の前に食べ終えます。火口が開放された場合は、昼食か由布院の予備時間を使います。",place:"aso"},
     {time:"13:00–15:00",title:"前往由布院・車上午睡",title_ja:"由布院へ・車内で昼寝",detail:"規劃抓約 1 小時 45 分至 2 小時 15 分；含休息時可更久。",detail_ja:"約1時間45分〜2時間15分を見込んでいます。休憩を含めると、さらにかかることがあります。",place:"yufuin",tag:"午睡",tag_ja:"昼寝"},
     {time:"15:00–15:50",title:"金鱗湖、湯之坪街道",title_ja:"金鱗湖・湯の坪街道",detail:"湖畔和商店擇一段走；若火山口加進來或山路慢行，這段優先縮短。",detail_ja:"湖畔か商店街のどちらかを歩きます。火口に立ち寄った場合や山道に時間がかかった場合は、ここを優先的に短縮します。",place:"yufuin"},
-    {time:"15:50–17:00",title:"前往 Beppu Kanko Hotel Ace 並入住",title_ja:"別府観光ホテル エースへ・チェックイン",detail:"由布院到飯店抓約 45–60 分鐘，再預留停車與入住時間。",detail_ja:"由布院からホテルまで約45〜60分。駐車とチェックインの時間も見込みます。",place:"beppu_hotel",tag:"別府第 1 晚",tag_ja:"別府 1泊目"},
+    {time:"15:50–17:00",title:"前往 Beppu Kanko Hotel Ace 並入住",title_ja:"別府観光ホテル エースへ・チェックイン",detail:"由布院到飯店抓約 45–60 分鐘，再預留停車與入住時間。",detail_ja:"由布院からホテルまで約45〜60分。駐車とチェックインの時間も見込みます。",place:"beppu_hotel",illustrated:true,tag:"別府第 1 晚",tag_ja:"別府 1泊目"},
     {time:"17:30",title:"別府晚餐與休息",title_ja:"別府で夕食・休憩",detail:"冷麵、唐揚或豐後牛，依孩子狀態選飯店周邊或方便停車的店。",detail_ja:"冷麺・唐揚げ・豊後牛など。子どもの様子を見て、ホテル周辺か駐車しやすいお店を選びます。",place:"beppu_hotel"}
   ]},
   3:{title:"九州自然動物園 → 海地獄 → 別府市區",title_ja:"九州自然動物公園 → 海地獄 → 別府市街",subtitle:"動物園是今日主角；午餐後去海地獄，傍晚留給別府散步與晚餐。",subtitle_ja:"今日の主役は動物公園です。昼食後に海地獄へ行き、夕方は別府の散策と夕食にあてます。",insight:"海地獄目前公告 08:00–17:00；排在午後仍要留意離園及車程。若動物園玩得久，海地獄以單點短逛，晚間逛街依孩子體力決定。",insight_ja:"海地獄の営業時間は現在 8:00〜17:00 と案内されています。午後の訪問でも、退園時間と移動時間に注意します。動物公園で長く過ごした場合は海地獄を短時間だけ見学し、夜の散策は子どもの体力次第で決めます。",events:[
@@ -171,7 +171,7 @@ const isAttractionEvent=event=>{
   if(event.place==="kusasenri")return /草千里散步/.test(title);
   if(event.place==="yufuin")return /金鱗湖|湯之坪街道/.test(title)&&!/前往/.test(title);
   if(event.place==="safari")return /九州自然動物園/.test(title);
-  if(event.place==="umi")return title==="海地獄";
+  if(event.place==="umi")return /^海地獄/.test(title);
   if(event.place==="daikanbo")return /大觀峰短停/.test(title);
   if(event.place==="castle")return /熊本城/.test(title)&&!/午餐/.test(title);
   if(event.place==="suizenji")return /水前寺成趣園/.test(title);
@@ -263,7 +263,7 @@ function openPlaceInfo(id,eventIndex){
   const place=PLACES[id],info=PLACE_INFO[id];if(!place||!info)return;
   const event=Number.isInteger(eventIndex)&&activeDay>0?dayData(activeDay).events[eventIndex]:null;
   const attraction=event?isAttractionEvent(event):isAttractionPlace(id);
-  const lodging=ILLUSTRATED_INFO_PLACES.has(id)&&(id!=="aso_onsen"||event?.illustrated===true);
+  const lodging=ILLUSTRATED_INFO_PLACES.has(id)&&event?.illustrated===true;
   const illustrated=attraction||lodging;
   highlightPlace(id,false);
   const dialog=$("placeDialog"),art=$("placeDialogArt"),priority=$("placeDialogPriority");
