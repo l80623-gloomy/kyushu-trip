@@ -51,6 +51,14 @@ body.is-ja{font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
 .place-art[data-place="umi"],.place-art[data-place="takegawara"]{background-position:center 42%}
 .place-art[data-place="castle"]{background-position:right 16%}
 .place-art[data-place="suizenji"]{background-position:right 75%}
+.place-art.scene-safari{background-image:url("kyushu_safari_watercolor.png");background-size:cover;background-position:center top}
+.place-art.scene-umi-jigoku{background-image:url("kumamoto-umi-jigoku-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-suizenji{background-image:url("kumamoto-suizenji-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-castle-josaien{background-image:url("kumamoto-castle-josaien-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-yufuin{background-image:url("kumamoto-yufuin-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-shirakawa{background-image:url("kumamoto-shirakawa-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-kusasenri{background-image:url("kumamoto-kusasenri-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-daikanbo{background-image:url("kumamoto-daikanbo-watercolor-v1.png");background-size:cover;background-position:center}
 .place-dialog.text-only{width:min(620px,calc(100% - 30px))}
 .place-dialog.text-only .place-dialog-body{padding-top:38px}
 .place-dialog-body{padding:27px 30px 30px}.place-dialog-body .eyebrow{margin-bottom:7px}
