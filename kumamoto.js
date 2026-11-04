@@ -42,16 +42,16 @@ const PLACE_INFO={
   strawberry:{scene:"strawberry",priority:"C 路線重點",priority_ja:"C ルートの見どころ",level:"flex",stay:"約 60 分鐘",stay_ja:"約60分",description:"阿蘇健康農園安排在 C 路線的早晨，從民宿あそげん退房後先採草莓，再一路往熊本市區。",description_ja:"阿蘇健康農園は C ルートの朝に組み込んでいます。民宿あそげんをチェックアウトした後にいちご狩りを楽しみ、そのまま熊本市街へ向かいます。",family:"出發前確認當季採果開放日、最後入園時間、是否需要預約與幼兒收費規則；溫室內可準備薄外套與濕紙巾。",family_ja:"出発前に、その季節のいちご狩りの営業日、最終受付時間、予約の要否、幼児の料金を確認します。ハウス内に備えて、薄手の上着とウェットティッシュを用意します。"},
   daikanbo:{scene:"daikanbo",priority:"景觀線選項",priority_ja:"景観ルート限定",level:"flex",stay:"30–40 分鐘",stay_ja:"30〜40分",description:"大觀峰位於阿蘇北外輪山，可從不同角度眺望阿蘇五岳，是避免重複草千里的中繼站。",description_ja:"大観峰は阿蘇の北外輪山にあり、草千里ヶ浜とは違う角度から阿蘇五岳を望めます。草千里ヶ浜と景色が重ならないように選んだ、途中の立ち寄り先です。",family:"濃霧、強風或下雨時景觀價值大幅下降，可直接取消改回熊本。",family_ja:"濃霧・強風・雨の日は眺望がほとんど期待できないため、立ち寄らずにそのまま熊本へ向かいます。"},
   kumamoto:{scene:"kumamoto",priority:"住宿基地",priority_ja:"宿泊拠点",level:"core",stay:"依入住安排",stay_ja:"チェックインの時間に合わせて",description:"熊本市區最後一晚以停車、入住、晚餐與整理行李為主，景點安排依 Day 4 路線調整。",description_ja:"熊本市街での最後の夜は、駐車・チェックイン・夕食・荷物の整理が中心です。観光の予定は Day 4 のルートによって変わります。",family:"先確認飯店停車和入住時間，避免帶著孩子繞市區找車位。",family_ja:"ホテルの駐車場とチェックイン時間を事前に確認し、子ども連れで駐車場を探し回らないようにします。"},
-  kumamoto_hotel:{scene:"kumamoto",priority:"Day 4 住宿",priority_ja:"Day 4 の宿泊",level:"core",stay:"15:00 後入住・11:00 前退房",stay_ja:"15:00からチェックイン・11:00までにチェックアウト",description:"第四晚確定入住相鐵 GRAND FRESA 熊本，地址為熊本市中央區下通 2-2-23；位於下通商店街周邊，方便晚餐與隔日市區行程。",description_ja:"4泊目は相鉄グランドフレッサ 熊本（熊本市中央区下通2-2-23）に宿泊します。下通商店街のそばにあり、夕食や翌日の市街観光に便利です。",family:"飯店沒有自有停車場，需使用步行範圍內的合作停車場，滿車時再改停附近的投幣式停車場。出發前向飯店確認合作停車場的位置、費用、限高及能否中途出庫；帶幼兒與行李時，先在安全位置完成下車再由一位成人前往停車。",family_ja:"ホテル専用の駐車場はなく、徒歩圏内の提携駐車場を利用します。満車の場合は近くのコインパーキングを使います。出発前にホテルへ、提携駐車場の場所・料金・高さ制限と、途中で出し入れできるかを確認します。幼児と荷物があるときは安全な場所で先に降り、大人1人が車を停めに行きます。"},
+  kumamoto_hotel:{scene:"grand-fresa",priority:"Day 4 住宿",priority_ja:"Day 4 の宿泊",level:"core",stay:"15:00 後入住・11:00 前退房",stay_ja:"15:00からチェックイン・11:00までにチェックアウト",description:"第四晚確定入住相鐵 GRAND FRESA 熊本，地址為熊本市中央區下通 2-2-23；位於下通商店街周邊，方便晚餐與隔日市區行程。",description_ja:"4泊目は相鉄グランドフレッサ 熊本（熊本市中央区下通2-2-23）に宿泊します。下通商店街のそばにあり、夕食や翌日の市街観光に便利です。",family:"飯店沒有自有停車場，需使用步行範圍內的合作停車場，滿車時再改停附近的投幣式停車場。出發前向飯店確認合作停車場的位置、費用、限高及能否中途出庫；帶幼兒與行李時，先在安全位置完成下車再由一位成人前往停車。",family_ja:"ホテル専用の駐車場はなく、徒歩圏内の提携駐車場を利用します。満車の場合は近くのコインパーキングを使います。出発前にホテルへ、提携駐車場の場所・料金・高さ制限と、途中で出し入れできるかを確認します。幼児と荷物があるときは安全な場所で先に降り、大人1人が車を停めに行きます。"},
   castle:{scene:"castle-josaien",priority:"建議保留",priority_ja:"おすすめ",level:"flex",stay:"1.5–2 小時",stay_ja:"1.5〜2時間",description:"熊本城與城彩苑可把歷史景觀、地方小吃和伴手禮放在同一站完成。是否放 Day 4 或 Day 5 取決於回熊本的路線。",description_ja:"熊本城と桜の馬場 城彩苑では、歴史ある景観・ご当地グルメ・お土産を一か所で楽しめます。Day 4 と Day 5 のどちらで訪れるかは、熊本へ戻るルートによって決まります。",family:"園區有坡道與台階，揹帶通常比全程推車靈活；注意最晚入園時間。",family_ja:"園内は坂道や階段が多いため、ベビーカーより抱っこひもの方が動きやすいことが多いです。最終入園時間に注意します。"},
   suizenji:{scene:"suizenji",priority:"替代方案",priority_ja:"代替プラン",level:"optional",stay:"40–60 分鐘",stay_ja:"40〜60分",description:"水前寺成趣園是池泉回遊式庭園，適合已在前一天逛過熊本城時，安排一段節奏較慢的晨間散步。",description_ja:"水前寺成趣園は池泉回遊式の日本庭園です。前日に熊本城を見学済みの場合に、朝ゆっくり散策する場所として組み込んでいます。",family:"園內沒有一般遊客專用停車場，先選好附近付費停車場。",family_ja:"一般来園者用の専用駐車場はないため、周辺の有料駐車場を事前に決めておきます。"},
-  shopping:{scene:"kumamoto",priority:"彈性安排",priority_ja:"自由時間",level:"optional",stay:"60–120 分鐘",stay_ja:"60〜120分",description:"上通與下通是有遮蔽的市中心商店街，可集中處理晚餐、小吃和伴手禮。",description_ja:"上通・下通はアーケードのある中心街の商店街で、夕食・食べ歩き・お土産をまとめて済ませられます。",family:"把必買清單先寫好；返程日依實際交通方式，倒推取行李與機場報到時間。",family_ja:"買う物のリストを事前に作っておきます。帰国日は利用する交通手段に合わせ、荷物の受け取りと空港でのチェックインから逆算して動きます。"}
+  shopping:{scene:"kamitori-shimotori",priority:"彈性安排",priority_ja:"自由時間",level:"optional",stay:"60–120 分鐘",stay_ja:"60〜120分",description:"上通與下通是有遮蔽的市中心商店街，可集中處理晚餐、小吃和伴手禮。",description_ja:"上通・下通はアーケードのある中心街の商店街で、夕食・食べ歩き・お土産をまとめて済ませられます。",family:"把必買清單先寫好；返程日依實際交通方式，倒推取行李與機場報到時間。",family_ja:"買う物のリストを事前に作っておきます。帰国日は利用する交通手段に合わせ、荷物の受け取りと空港でのチェックインから逆算して動きます。"}
 };
-const ATTRACTION_PLACES=new Set(["shirakawa","kusasenri","crater","yufuin","safari","umi","takegawara","daikanbo","castle","suizenji","strawberry"]);
-const ILLUSTRATED_INFO_PLACES=new Set(["still_hotel","beppu_hotel","aso_onsen"]);
+const ATTRACTION_PLACES=new Set(["shirakawa","kusasenri","crater","yufuin","safari","umi","takegawara","daikanbo","castle","suizenji","strawberry","shopping"]);
+const ILLUSTRATED_INFO_PLACES=new Set(["still_hotel","beppu_hotel","aso_onsen","kumamoto_hotel"]);
 const DAYS={
   1:{title:"熊本機場周邊・抵達日",title_ja:"熊本空港周辺・到着日",subtitle:"18:15 抵達後不租車、不進市區。先吃飯，再入住 THE STILL HOTEL。",subtitle_ja:"18:15 に到着後、レンタカーは借りず、市街にも行きません。食事をしてから THE STILL HOTEL に宿泊します。",insight:"第一晚入住 THE STILL HOTEL。從機場搭空港 Liner 至肥後大津站後步行約 1 分鐘；先查當日晚間末班車，若錯過則改搭計程車。",insight_ja:"初日は THE STILL HOTEL に宿泊します。空港ライナーで肥後大津駅へ行き、駅から徒歩約1分です。当日の最終便を確認し、間に合わない場合はタクシーを利用します。",events:[
-    {time:"15:00–18:15",title:"台中飛往熊本",title_ja:"台中 → 熊本（フライト）",detail:"航班時間依原行程；以實際機票為準。",detail_ja:"フライト時刻は元の旅程によるものです。実際の航空券の内容を優先してください。",place:"airport",tag:"航班",tag_ja:"フライト"},
+    {time:"15:00–18:15",title:"台中飛往熊本",art:"taichung-airport",title_ja:"台中 → 熊本（フライト）",detail:"航班時間依原行程；以實際機票為準。",detail_ja:"フライト時刻は元の旅程によるものです。実際の航空券の内容を優先してください。",place:"airport",tag:"航班",tag_ja:"フライト"},
     {time:"約 18:30–19:20",title:"入境、領行李",title_ja:"入国審査・手荷物の受け取り",detail:"抓約 50 分鐘緩衝；依排隊與行李提領順延。",detail_ja:"約50分の余裕を見ています。混雑や荷物の受け取りの状況に応じて後ろにずらします。",place:"airport"},
     {time:"約 19:20–20:05",title:"機場周邊晚餐",title_ja:"空港周辺で夕食",detail:"優先選抵達後可進入的航廈 1F 或そらよかダイニング；若延誤，改飯店附近或預備輕食。先查當日最後點餐時間。",detail_ja:"到着後でも入れるターミナル1階や「そらよかダイニング」を優先します。遅延した場合はホテル周辺のお店か、用意しておいた軽食にします。当日のラストオーダーを事前に確認します。",place:"airport",tag:"先用餐",tag_ja:"まず食事"},
     {time:"約 20:15",title:"前往 THE STILL HOTEL",title_ja:"THE STILL HOTEL へ",detail:"搭空港 Liner 至肥後大津站後步行約 1 分鐘；先確認末班車，若已錯過則改搭計程車。",detail_ja:"空港ライナーで肥後大津駅へ行き、駅から徒歩約1分です。最終便を確認し、間に合わない場合はタクシーを利用します。",place:"still_hotel",tag:"Day 1 住宿",tag_ja:"Day 1 の宿泊"},
@@ -59,7 +59,7 @@ const DAYS={
   ]},
   2:{title:"機場周邊 → 白川水源 → 草千里 → 由布院 → 別府",title_ja:"空港周辺 → 白川水源 → 草千里ヶ浜 → 由布院 → 別府",subtitle:"南阿蘇水源先走，接草千里；午後往由布院的路段安排午睡。",subtitle_ja:"まず南阿蘇の白川水源、続いて草千里ヶ浜へ。午後の由布院への移動中に昼寝の時間をとります。",insight:"白川水源先於草千里，方向順。火山口目前受管制，不能列為固定景點；若出發時重新開放且時間充裕，才加看 30–45 分鐘，並縮短由布院停留。各段車程為規劃估值，出發前看導航。",insight_ja:"白川水源を先に回ると、草千里ヶ浜への道順がスムーズです。阿蘇中岳火口は現在規制中のため、確定の予定には入れていません。出発時に規制が解除され、時間に余裕がある場合のみ 30〜45分立ち寄り、その分由布院の滞在を短くします。各区間の所要時間は計画上の目安なので、出発前にナビで確認します。",events:[
     {time:"07:45–08:15",title:"THE STILL HOTEL 早餐、退房",title_ja:"THE STILL HOTEL で朝食・チェックアウト",detail:"退房後搭空港 Liner 或計程車返回機場租車點；前一晚先確認班次與取車營業所位置。",detail_ja:"チェックアウト後、空港ライナーまたはタクシーで空港のレンタカー営業所へ戻ります。前夜に時刻と営業所の場所を確認します。",place:"still_hotel"},
-    {time:"08:30–09:00",title:"取車與安裝兒童座椅",title_ja:"レンタカー受け取り・チャイルドシート装着",detail:"2/19 08:30 預約取車；確認座椅、ETC、導航語言，以及 2/21 18:30 的還車門市與流程。",detail_ja:"2/19 08:30 にレンタカーを受け取ります。チャイルドシート、ETC、ナビの言語、2/21 18:30 の返却店舗と手順を確認します。",place:"airport",tag:"固定取車時間",tag_ja:"受取時刻確定"},
+    {time:"08:30–09:00",title:"取車與安裝兒童座椅",art:"rental-car",title_ja:"レンタカー受け取り・チャイルドシート装着",detail:"2/19 08:30 預約取車；確認座椅、ETC、導航語言，以及 2/21 18:30 的還車門市與流程。",detail_ja:"2/19 08:30 にレンタカーを受け取ります。チャイルドシート、ETC、ナビの言語、2/21 18:30 の返却店舗と手順を確認します。",place:"airport",tag:"固定取車時間",tag_ja:"受取時刻確定"},
     {time:"09:00–09:50",title:"開往白川水源",title_ja:"白川水源へ",detail:"規劃抓約 45–60 分鐘；以實際道路與停車位置為準。",detail_ja:"約45〜60分を見込んでいます。実際の道路状況と駐車場所によって変わります。",place:"shirakawa"},
     {time:"09:50–10:25",title:"白川水源短走",title_ja:"白川水源を散策",detail:"約 30–35 分鐘，讓孩子活動、補水。",detail_ja:"約30〜35分。子どもが体を動かし、水分補給をする時間です。",place:"shirakawa"},
     {time:"10:25–11:10",title:"上山前往草千里",title_ja:"山を上って草千里ヶ浜へ",detail:"山路抓約 35–50 分鐘，留轉彎與停車緩衝。",detail_ja:"山道で約35〜50分。カーブの多い道と駐車のために余裕を持たせます。",place:"kusasenri"},
@@ -86,7 +86,7 @@ const DAY4={
     {time:"約 10:45–11:20",title:"大觀峰短停",title_ja:"大観峰に立ち寄り",detail:"看阿蘇全景、伸展約 30–35 分鐘；遇濃霧或大風可取消。",detail_ja:"阿蘇の全景を眺め、30〜35分ほど体を伸ばします。濃霧や強風のときは取りやめます。",place:"daikanbo",tag:"中繼站",tag_ja:"途中の立ち寄り"},
     {time:"11:30–12:15",title:"附近午餐",title_ja:"周辺で昼食",detail:"選方便停車的阿蘇店家，先餵飽孩子。",detail_ja:"駐車しやすい阿蘇のお店を選び、まず子どもに食べさせます。",place:"aso"},
     {time:"12:15–14:15",title:"前往熊本・車上午睡",title_ja:"熊本へ・車内で昼寝",detail:"抓約 1.5–2 小時，依道路、休息和市區交通調整。",detail_ja:"約1.5〜2時間。道路状況・休憩・市街の交通に応じて調整します。",place:"kumamoto",tag:"午睡",tag_ja:"昼寝"},
-    {time:"約 15:00",title:"相鐵 GRAND FRESA 熊本入住",title_ja:"相鉄グランドフレッサ 熊本にチェックイン",detail:"飯店沒有自有停車場；停進步行範圍內的合作停車場（滿車時改停附近的投幣式停車場），再帶行李步行入住。",detail_ja:"ホテル専用の駐車場はないため、徒歩圏内の提携駐車場に停めます（満車の場合は近くのコインパーキング）。駐車後、荷物を持って歩いてチェックインします。",place:"kumamoto_hotel",tag:"熊本市區住宿",tag_ja:"熊本市内泊"},
+    {time:"約 15:00",title:"相鐵 GRAND FRESA 熊本入住",title_ja:"相鉄グランドフレッサ 熊本にチェックイン",detail:"飯店沒有自有停車場；停進步行範圍內的合作停車場（滿車時改停附近的投幣式停車場），再帶行李步行入住。",detail_ja:"ホテル専用の駐車場はないため、徒歩圏内の提携駐車場に停めます（満車の場合は近くのコインパーキング）。駐車後、荷物を持って歩いてチェックインします。",place:"kumamoto_hotel",illustrated:true,tag:"熊本市區住宿",tag_ja:"熊本市内泊"},
     {time:"16:00–18:30",title:"上通、下通與晚餐",title_ja:"上通・下通と夕食",detail:"下午逛商店街、吃熊本料理。熊本城留 Day 5。",detail_ja:"午後は商店街を散策し、熊本料理を味わいます。熊本城は Day 5 に回します。",place:"shopping"}
   ]},
   highway:{title:"別府 → 熊本｜高速線",title_ja:"別府 → 熊本｜高速ルート",subtitle:"直接走高速公路回熊本，把多出的時間留給熊本城。",subtitle_ja:"高速道路でまっすぐ熊本へ戻り、浮いた時間を熊本城にあてます。",insight:"NEXCO 的別府 IC→熊本 IC 查詢約 2 小時 8 分；加上旅館到交流道、熊本市區和休息，門到門先抓約 2 小時 45 分至 3 小時 15 分。相較景觀線通常可省約 1–2 小時的總行程時間，仍以當日導航為準。",insight_ja:"NEXCO で別府IC→熊本IC を調べると約2時間8分です。宿からICまでの移動、熊本市街の移動、休憩を加えると、ドア・ツー・ドアで約2時間45分〜3時間15分を見込みます。景観ルートより全体で1〜2時間ほど短縮できることが多いですが、当日のナビを優先します。",events:[
@@ -94,7 +94,7 @@ const DAY4={
     {time:"約 11:15–12:15",title:"熊本市區午餐",title_ja:"熊本市街で昼食",detail:"抵達時間受交流道、塞車與停車影響。",detail_ja:"到着時間は、ICの出入り・渋滞・駐車の状況によって変わります。",place:"kumamoto"},
     {time:"12:15–13:30",title:"午睡或安靜休息",title_ja:"昼寝、または静かに休憩",detail:"可在車上接午睡，成人留在車旁照看；若飯店可提早入住則回房休息。",detail_ja:"車内で昼寝を続け、大人が車のそばで見守ります。ホテルに早めにチェックインできれば、部屋で休みます。",place:"kumamoto",tag:"午睡",tag_ja:"昼寝"},
     {time:"14:00–16:00",title:"熊本城與城彩苑",title_ja:"熊本城と城彩苑",detail:"官方一般季節最晚 16:00 入園；若午睡延長就改先逛城彩苑，熊本城移回 Day 5。",detail_ja:"通常期の最終入園は 16:00 です。昼寝が長引いた場合は先に城彩苑を回り、熊本城は Day 5 に移します。",place:"castle"},
-    {time:"16:15",title:"相鐵 GRAND FRESA 熊本入住",title_ja:"相鉄グランドフレッサ 熊本にチェックイン",detail:"飯店沒有自有停車場；停進步行範圍內的合作停車場（滿車時改停附近的投幣式停車場），再帶行李步行入住。",detail_ja:"ホテル専用の駐車場はないため、徒歩圏内の提携駐車場に停めます（満車の場合は近くのコインパーキング）。駐車後、荷物を持って歩いてチェックインします。",place:"kumamoto_hotel",tag:"熊本市區住宿",tag_ja:"熊本市内泊"},
+    {time:"16:15",title:"相鐵 GRAND FRESA 熊本入住",title_ja:"相鉄グランドフレッサ 熊本にチェックイン",detail:"飯店沒有自有停車場；停進步行範圍內的合作停車場（滿車時改停附近的投幣式停車場），再帶行李步行入住。",detail_ja:"ホテル専用の駐車場はないため、徒歩圏内の提携駐車場に停めます（満車の場合は近くのコインパーキング）。駐車後、荷物を持って歩いてチェックインします。",place:"kumamoto_hotel",illustrated:true,tag:"熊本市區住宿",tag_ja:"熊本市内泊"},
     {time:"17:30",title:"熊本晚餐",title_ja:"熊本で夕食",detail:"下通周邊找家適合孩子的餐廳。",detail_ja:"下通周辺で、子ども連れに向いたお店を探します。",place:"shopping"}
   ]},
   aso:{title:"民宿あそげん → 採草莓 → 熊本｜C 路線",title_ja:"民宿あそげん → いちご狩り → 熊本｜C ルート",subtitle:"從民宿あそげん退房後採草莓，下午進熊本城與城彩苑。",subtitle_ja:"民宿あそげんをチェックアウトしていちご狩りへ。午後は熊本城と城彩苑へ。",insight:"此版本承接 Day 3 入住民宿あそげん。採果出發前務必確認當季營業、入園與預約規則；中午以簡單用餐和車上午睡銜接，讓下午仍能保留熊本城時間。",insight_ja:"このプランは、Day 3 に民宿あそげんに泊まる場合の続きです。いちご狩りに出かける前に、その季節の営業状況・入園・予約のルールを必ず確認してください。昼は手早く食事を済ませて車内での昼寝につなげ、午後に熊本城を見学する時間を確保します。",events:[
@@ -104,8 +104,8 @@ const DAY4={
     {time:"12:15–13:00",title:"熊本市區午餐",title_ja:"熊本市街で昼食",detail:"優先選停車方便、能快速出餐的店，讓午後行程準時接上。",detail_ja:"駐車しやすく料理がすぐに出るお店を優先し、午後の予定に遅れないようにします。",place:"kumamoto"},
     {time:"13:00–14:15",title:"車上午睡或安靜休息",title_ja:"車内で昼寝、または静かに休憩",detail:"可在車上接午睡；成人陪同，醒來後再前往熊本城。",detail_ja:"車内で昼寝を続け、大人が付き添います。起きてから熊本城へ向かいます。",place:"kumamoto",tag:"午睡",tag_ja:"昼寝"},
     {time:"14:30–16:15",title:"熊本城、城彩苑",title_ja:"熊本城・城彩苑",detail:"以天守閣與城彩苑為主；若午睡延長，優先保留城彩苑與外圍散步。",detail_ja:"天守閣と城彩苑が中心です。昼寝が長引いた場合は、城彩苑と城の周辺の散策を優先します。",place:"castle",tag:"午後重點",tag_ja:"午後の見どころ"},
-    {time:"16:30",title:"相鐵 GRAND FRESA 熊本入住",title_ja:"相鉄グランドフレッサ 熊本にチェックイン",detail:"飯店沒有自有停車場，但 C 路線當天就還車，不需停車過夜。辦理入住時先暫停步行範圍內的合作停車場（滿車時改停附近的投幣式停車場），卸下行李入住後，再依租車預約單前往還車門市。",detail_ja:"ホテル専用の駐車場はありませんが、C ルートは当日中にレンタカーを返却するため、夜間の駐車は不要です。チェックインの間は徒歩圏内の提携駐車場（満車の場合は近くのコインパーキング）に一時的に停め、荷物を降ろしてチェックインした後、予約票に記載された返却店舗へ向かいます。",place:"kumamoto_hotel",tag:"熊本市區住宿",tag_ja:"熊本市内泊"},
-    {time:"17:15–18:20",title:"加油、前往還車門市",title_ja:"給油・レンタカー返却店舗へ",detail:"還車門市依租車預約單確認；保留市區車流、加油與辦理手續時間。",detail_ja:"返却店舗は予約票で確認します。市街の渋滞、給油、返却手続きの時間に余裕を持たせます。",place:"kumamoto",tag:"固定還車前準備",tag_ja:"返却前の準備"},
+    {time:"16:30",title:"相鐵 GRAND FRESA 熊本入住",title_ja:"相鉄グランドフレッサ 熊本にチェックイン",detail:"飯店沒有自有停車場，但 C 路線當天就還車，不需停車過夜。辦理入住時先暫停步行範圍內的合作停車場（滿車時改停附近的投幣式停車場），卸下行李入住後，再依租車預約單前往還車門市。",detail_ja:"ホテル専用の駐車場はありませんが、C ルートは当日中にレンタカーを返却するため、夜間の駐車は不要です。チェックインの間は徒歩圏内の提携駐車場（満車の場合は近くのコインパーキング）に一時的に停め、荷物を降ろしてチェックインした後、予約票に記載された返却店舗へ向かいます。",place:"kumamoto_hotel",illustrated:true,tag:"熊本市區住宿",tag_ja:"熊本市内泊"},
+    {time:"17:15–18:20",title:"加油、前往還車門市",art:"rental-car",title_ja:"給油・レンタカー返却店舗へ",detail:"還車門市依租車預約單確認；保留市區車流、加油與辦理手續時間。",detail_ja:"返却店舗は予約票で確認します。市街の渋滞、給油、返却手続きの時間に余裕を持たせます。",place:"kumamoto",tag:"固定還車前準備",tag_ja:"返却前の準備"},
     {time:"18:30",title:"完成還車",title_ja:"レンタカー返却",detail:"2/21 18:30 為固定還車時間；完成後改以步行、大眾運輸或計程車移動。",detail_ja:"2/21 18:30 が確定した返却時刻です。返却後は徒歩、公共交通機関、またはタクシーで移動します。",tag:"固定時間",tag_ja:"確定時刻"},
     {time:"19:00",title:"熊本晚餐",title_ja:"熊本で夕食",detail:"回下通周邊找適合孩子的餐廳；晚間不再塞景點。",detail_ja:"下通周辺で、子ども連れに向いたお店を探します。夜は観光の予定を入れません。",place:"shopping"}
   ]}
@@ -131,11 +131,11 @@ const DAY5={
   ]}
 };
 const AIRPORT_EVENTS=[
-  {time:"17:00",title:"機場報到",title_ja:"空港でチェックイン",detail:"整理託運行李與孩子用品。",detail_ja:"預け荷物と子どもの持ち物を整理します。",place:"airport"},
+  {time:"17:00",title:"機場報到",art:"kumamoto-airport",title_ja:"空港でチェックイン",detail:"整理託運行李與孩子用品。",detail_ja:"預け荷物と子どもの持ち物を整理します。",place:"airport"},
   {time:"19:15–20:45",title:"飛返台灣",title_ja:"台湾へ帰国（フライト）",detail:"原行程航班時間；以實際訂票紀錄為準。",detail_ja:"元の旅程のフライト時刻です。実際の予約記録を優先してください。",place:"airport",tag:"航班",tag_ja:"フライト"}
 ];
 const RETURN_EVENTS=[
-  {time:"15:15–16:15",title:"前往機場、加油還車",title_ja:"空港へ・給油してレンタカー返却",detail:"留市區車流與加油緩衝，約 16:15 還車。",detail_ja:"市街の渋滞と給油の時間を見込み、16:15 ごろに返却します。",place:"airport",tag:"返程緩衝",tag_ja:"帰路の予備時間"},
+  {time:"15:15–16:15",title:"前往機場、加油還車",art:"rental-car",title_ja:"空港へ・給油してレンタカー返却",detail:"留市區車流與加油緩衝，約 16:15 還車。",detail_ja:"市街の渋滞と給油の時間を見込み、16:15 ごろに返却します。",place:"airport",tag:"返程緩衝",tag_ja:"帰路の予備時間"},
   ...AIRPORT_EVENTS
 ];
 const RETURN_EVENTS_C=[
@@ -191,6 +191,7 @@ const isAttractionEvent=event=>{
   if(event.place==="strawberry")return /阿蘇健康農園採草莓/.test(title);
   if(event.place==="takegawara")return /竹瓦溫泉/.test(title);
   if(event.place==="crater")return /火山口/.test(title);
+  if(event.place==="shopping")return /上通|下通/.test(title);
   return false;
 };
 const driveBuffer=event=>{
@@ -279,11 +280,13 @@ function openPlaceInfo(id,eventIndex){
   const attraction=event?isAttractionEvent(event):isAttractionPlace(id);
   const lodging=ILLUSTRATED_INFO_PLACES.has(id)&&event?.illustrated===true;
   const illustrated=attraction||lodging;
+  // Event-level art (airports, rental car): show the picture but keep the event's own text
+  const eventArt=!illustrated&&event?.art?event.art:null;
   highlightPlace(id,false);
   const dialog=$("placeDialog"),art=$("placeDialogArt"),priority=$("placeDialogPriority");
-  dialog.className=`place-dialog${illustrated?"":" text-only"}`;
-  art.hidden=!illustrated;art.className=`place-art scene-${info.scene}`;art.dataset.place=id;
-  art.setAttribute("aria-label",illustrated?`${placeName(id)}${isJa()?"の水彩イラスト":"水彩旅行插圖"}`:"");
+  dialog.className=`place-dialog${illustrated||eventArt?"":" text-only"}`;
+  art.hidden=!(illustrated||eventArt);art.className=`place-art scene-${eventArt||info.scene}`;art.dataset.place=id;
+  art.setAttribute("aria-label",illustrated?`${placeName(id)}${isJa()?"の水彩イラスト":"水彩旅行插圖"}`:eventArt?`${event.title}${isJa()?"の水彩イラスト":"水彩旅行插圖"}`:"");
   $("placeDialogArea").textContent=attraction?`${isJa()?placeName(id):place.area}・${isJa()?"スポット案内":"景點簡介"}`:(activeDay?`DAY ${activeDay}・${isJa()?"予定の説明":"行程說明"}`:(isJa()?"予定の説明":"行程說明"));
   $("placeDialogTitle").textContent=illustrated?placeName(id):(event?.title||placeName(id));
   $("placeDialogDescription").textContent=illustrated?loc(info,"description"):(event?.detail||loc(info,"description"));

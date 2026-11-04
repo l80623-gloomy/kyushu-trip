@@ -58,6 +58,11 @@ body.is-ja{font-family:"Noto Sans JP","Noto Sans TC",sans-serif}
 .place-art.scene-yufuin{background-image:url("kumamoto-yufuin-watercolor-v1.png");background-size:cover;background-position:center}
 .place-art.scene-shirakawa{background-image:url("kumamoto-shirakawa-watercolor-v1.png");background-size:cover;background-position:center}
 .place-art.scene-kusasenri{background-image:url("kumamoto-kusasenri-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-grand-fresa{background-image:url("kumamoto-sotetsu-grand-fresa-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-kamitori-shimotori{background-image:url("kumamoto-kamitori-shimotori-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-taichung-airport{background-image:url("taichung-airport-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-kumamoto-airport{background-image:url("kumamoto-airport-watercolor-v1.png");background-size:cover;background-position:center}
+.place-art.scene-rental-car{background-image:url("kumamoto-airport-rental-car-watercolor-v1.png");background-size:cover;background-position:center}
 .place-art.scene-daikanbo{background-image:url("kumamoto-daikanbo-watercolor-v1.png");background-size:cover;background-position:center}
 .place-dialog.text-only{width:min(620px,calc(100% - 30px))}
 .place-dialog.text-only .place-dialog-body{padding-top:38px}
